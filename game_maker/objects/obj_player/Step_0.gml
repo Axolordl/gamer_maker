@@ -6,18 +6,8 @@ down_key = keyboard_check(vk_down);
 xspd = (right_key - left_key)* move_spd;
 yspd = (down_key - up_key) * move_spd;
 
-//check if Player collides with wall
-if place_meeting(x + xspd, y, obj_wall) == true {
-	xspd = 0;
-}
-
-if place_meeting(x, y + yspd, obj_wall) == true {
-	yspd = 0;
-}
-
-//move the player
-x += xspd;
-y += yspd;
+//hitbox is always sprite DOWN
+mask_index = sprite[face];
 
 //set sprite animation
 if yspd == 0 {
@@ -35,6 +25,19 @@ if xspd == 0 {
 
 if yspd > 0 && face == UP {face = DOWN}
 if yspd < 0 && face == DOWN {face = UP}
+
+//check if Player collides with wall
+if place_meeting(x + xspd, y, obj_wall) == true {
+	xspd = 0;
+}
+
+if place_meeting(x, y + yspd, obj_wall) == true {
+	yspd = 0;
+}
+
+//move the player
+x += xspd;
+y += yspd;
 
 //idle animation
 if xspd == 0 && yspd == 0 {
