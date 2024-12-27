@@ -4,9 +4,15 @@ left_key = max(keyboard_check(vk_left), keyboard_check(ord("A")));
 up_key = max(keyboard_check(vk_up), keyboard_check(ord("W")));
 down_key = max(keyboard_check(vk_down), keyboard_check(ord("S")));
 
-
+//get xspd and yspd
 xspd = (right_key - left_key)* move_spd;
 yspd = (down_key - up_key) * move_spd;
+
+//pause 
+if instance_exists(obj_pauser) {
+	xspd = 0;
+	yspd = 0;
+}
 
 //hitbox is always sprite DOWN
 mask_index = sprite[face];
