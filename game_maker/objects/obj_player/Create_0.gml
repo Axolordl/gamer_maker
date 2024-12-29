@@ -9,6 +9,7 @@ move_spd = 1;
 spd = [];
 face = DOWN;
 
+
 // sprites
 sprite[RIGHT] = spr_player_right
 sprite[UP] = spr_player_up
