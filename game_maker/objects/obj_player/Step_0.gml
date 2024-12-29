@@ -15,7 +15,6 @@ set_sprite();
 set_depth();
 
 
-
 // // FUNCTIONS
 
 // controlls
@@ -67,7 +66,7 @@ function pause(){
 // sprite
 function set_face(){
 	// default
-	face = DOWN;
+	// face = DOWN;
 	
 	// check xspd
 	if spd[X] != 0 {
