@@ -1,72 +1,92 @@
 // // CODE
+pause();
+
+// movement & speed
+move_keys = get_move_keys()
+calc_spd();
+
+if !would_collide() {
+	move();
+}
+
+// sprite stuff
+set_face();
+set_sprite();
+set_depth();
+
 
 // // FUNCTIONS
 
-// WIP
-
-// player controlls
-right_key = max(keyboard_check(vk_right), keyboard_check(ord("D")));
-left_key = max(keyboard_check(vk_left), keyboard_check(ord("A")));
-up_key = max(keyboard_check(vk_up), keyboard_check(ord("W")));
-down_key = max(keyboard_check(vk_down), keyboard_check(ord("S")));
-
-
-//get xspd and yspd
-xspd = (right_key - left_key)* move_spd;
-yspd = (down_key - up_key) * move_spd;
-
-
-//pause 
-if instance_exists(obj_pauser) {
-	xspd = 0;
-	yspd = 0;
+// controlls
+function get_move_keys(){
+	// check for arrow or wasd keys
+	keys[UP] = max(keyboard_check(vk_up), keyboard_check(ord("W")));
+	keys[DOWN] = max(keyboard_check(vk_down), keyboard_check(ord("S")));
+	keys[LEFT] = max(keyboard_check(vk_left), keyboard_check(ord("A")));
+	keys[RIGHT] = max(keyboard_check(vk_right), keyboard_check(ord("D")));
+	
+	return keys;
 }
 
 
-//hitbox is always sprite DOWN
-mask_index = sprite[face];
-
-
-//set sprite animation
-if yspd == 0 {
-	if xspd > 0 {face = RIGHT}
-	if xspd < 0 {face = LEFT}
-}
-
-if xspd > 0 && face == LEFT {face = RIGHT}
-if xspd < 0 && face == RIGHT {face = LEFT}
-
-if xspd == 0 {
-	if yspd > 0 {face = DOWN}
-	if yspd < 0 {face = UP}
-}
-
-if yspd > 0 && face == UP {face = DOWN}
-if yspd < 0 && face == DOWN {face = UP}
-
-
-//check if Player collides with wall
-if place_meeting(x + xspd, y, obj_wall) == true {
-	xspd = 0;
-}
-
-if place_meeting(x, y + yspd, obj_wall) == true {
-	yspd = 0;
+// wall collision
+function would_collide(){
+	if place_meeting(x + spd[X], y, obj_wall) == true {
+		spd[X] = 0;
+		return true;
+	} else if place_meeting(x, y + spd[Y], obj_wall) == true {
+		spd[Y] = 0;
+		return true;
+	} else {
+		return false;
+	}
 }
 
 
-//move the player
-x += xspd;
-y += yspd;
+// movement
+function calc_spd(){
+	spd[X] = (move_keys[RIGHT] -  move_keys[LEFT])* move_spd;
+	spd[Y] = (move_keys[DOWN] -  move_keys[UP]) * move_spd;
+}
 
+function move(){
+	x += spd[X];
+	y += spd[Y];
+}
 
-//idle animation
-if xspd == 0 && yspd == 0 {
-	image_index = 0;
+// pause
+function pause(){
+	if instance_exists(obj_pauser) {
+		spd[X] = 0;
+		spd[Y] = 0;
+	}	
 }
 
 
-//depth
-depth = -bbox_bottom;
+// sprite
+function set_face(){
+	// default
+	face = DOWN;
+	
+	// check xspd
+	if spd[X] != 0 {
+		if spd[X] > 0 {face = RIGHT} else {face = LEFT};
+	}
+	
+	// check yspd
+	if spd[Y] != 0 {
+		if spd[Y] > 0 {face = DOWN} else {face = UP};
+	}
+}
 
-sprite_index = sprite[face];
+function set_sprite(){
+	if spd[X] == 0 && spd[Y] == 0{
+		image_index = 0;
+	} 
+	mask_index = sprite[face];
+	sprite_index = sprite[face];
+}
+
+function set_depth(){
+	depth = -bbox_bottom;
+}

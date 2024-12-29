@@ -1,15 +1,12 @@
 // // VARIABLES
 
 // keyboard & control
-up_key = false;
-down_key = false;
-right_key = false;
-left_key = false;
+move_keys = [];
+
 
 // movement & direction
 move_spd = 1;
-xspd = 0;
-yspd = 0
+spd = [];
 face = DOWN;
 
 // sprites

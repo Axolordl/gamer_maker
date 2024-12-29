@@ -1,7 +1,10 @@
 // // MACROS
 
 // direction
-#macro RIGHT 0
-#macro UP 1
-#macro LEFT 2
-#macro DOWN 3
+#macro UP 0
+#macro DOWN 1
+#macro RIGHT 2
+#macro LEFT 3
+
+#macro X 0
+#macro Y 1
