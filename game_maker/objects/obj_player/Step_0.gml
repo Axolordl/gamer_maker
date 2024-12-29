@@ -1,9 +1,13 @@
 // // CODE
-pause();
 
 // movement & speed
 move_keys = get_move_keys()
-calc_spd();
+
+if !instance_exists(obj_pauser) {
+	calc_spd();
+} else {
+	pause();
+}
 
 if !would_collide() {
 	move();
@@ -56,10 +60,8 @@ function move(){
 
 // pause
 function pause(){
-	if instance_exists(obj_pauser) {
-		spd[X] = 0;
-		spd[Y] = 0;
-	}	
+	spd[X] = 0;
+	spd[Y] = 0;
 }
 
 
