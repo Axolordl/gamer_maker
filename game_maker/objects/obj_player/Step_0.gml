@@ -16,8 +16,7 @@ if !would_collide() {
 // sprite stuff
 set_face();
 set_sprite();
-set_depth();
-
+set_depth(); 
 
 // // FUNCTIONS
 
