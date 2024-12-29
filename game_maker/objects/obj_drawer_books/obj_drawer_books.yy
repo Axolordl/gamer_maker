@@ -8,8 +8,8 @@
   "name":"obj_drawer_books",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objekte",
-    "path":"folders/Objekte.yy",
+    "name":"HouseDecorations",
+    "path":"folders/Objekte/HouseDecorations.yy",
   },
   "parentObjectId":{
     "name":"obj_wall",

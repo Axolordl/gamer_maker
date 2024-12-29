@@ -9,8 +9,8 @@
   "name":"obj_warp_block",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objekte",
-    "path":"folders/Objekte.yy",
+    "name":"Warp",
+    "path":"folders/Objekte/Warp.yy",
   },
   "parentObjectId":null,
   "persistent":false,

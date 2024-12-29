@@ -11,8 +11,8 @@
   "name":"obj_warp",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objekte",
-    "path":"folders/Objekte.yy",
+    "name":"Warp",
+    "path":"folders/Objekte/Warp.yy",
   },
   "parentObjectId":{
     "name":"obj_pauser",
