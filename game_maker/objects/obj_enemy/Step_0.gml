@@ -1,6 +1,7 @@
 // // CODE
 go_to_player();
 
+
 //depth
 depth = -bbox_bottom;
 
