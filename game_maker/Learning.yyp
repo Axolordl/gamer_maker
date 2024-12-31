@@ -59,6 +59,8 @@
     {"id":{"name":"scr_macros","path":"scripts/scr_macros/scr_macros.yy",},},
     {"id":{"name":"spr_bed","path":"sprites/spr_bed/spr_bed.yy",},},
     {"id":{"name":"spr_boss_minion_idle","path":"sprites/spr_boss_minion_idle/spr_boss_minion_idle.yy",},},
+    {"id":{"name":"spr_boss_minion_left","path":"sprites/spr_boss_minion_left/spr_boss_minion_left.yy",},},
+    {"id":{"name":"spr_boss_minion_right","path":"sprites/spr_boss_minion_right/spr_boss_minion_right.yy",},},
     {"id":{"name":"spr_candle","path":"sprites/spr_candle/spr_candle.yy",},},
     {"id":{"name":"spr_door","path":"sprites/spr_door/spr_door.yy",},},
     {"id":{"name":"spr_drawer_books","path":"sprites/spr_drawer_books/spr_drawer_books.yy",},},
@@ -91,8 +93,8 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"rm_bedroom","path":"rooms/rm_bedroom/rm_bedroom.yy",},},
     {"roomId":{"name":"rm_dungeon_entrance","path":"rooms/rm_dungeon_entrance/rm_dungeon_entrance.yy",},},
+    {"roomId":{"name":"rm_bedroom","path":"rooms/rm_bedroom/rm_bedroom.yy",},},
     {"roomId":{"name":"rm_homebase","path":"rooms/rm_homebase/rm_homebase.yy",},},
   ],
   "templateType":"game",
