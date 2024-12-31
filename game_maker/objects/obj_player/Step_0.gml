@@ -1,5 +1,10 @@
 // // CODE
 
+//Check if Health is above 0, if not die
+if (hp == 0) {
+	instance_destroy(self);	
+}
+
 // movement & speed
 move_keys = get_move_keys()
 

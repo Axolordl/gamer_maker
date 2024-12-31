@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_enemy",
-    "path":"sprites/spr_enemy/spr_enemy.yy",
+    "name":"spr_boss_minion_idle",
+    "path":"sprites/spr_boss_minion_idle/spr_boss_minion_idle.yy",
   },
   "spriteMaskId":null,
   "visible":true,
