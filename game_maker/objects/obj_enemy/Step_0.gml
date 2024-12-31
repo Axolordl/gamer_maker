@@ -1,10 +1,14 @@
 // // CODE
 go_to_player();
 
+//depth
+depth = -bbox_bottom;
+
+
 // // FUNCTIONS
 function go_to_player(){
 	// go to player X
-	if obj_player.x != x{
+	if (obj_player.x) != x{
 		if obj_player.x < x{
 			x -= movespeed;
 		} else {
