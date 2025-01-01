@@ -1,5 +1,10 @@
 // // CODE
-go_to_player();
+
+if (instance_exists(obj_player)) {
+	go_to_player();
+} else {
+	movespeed = 0;	
+}
 
 
 //depth
