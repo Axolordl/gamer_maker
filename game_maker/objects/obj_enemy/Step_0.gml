@@ -1,5 +1,6 @@
 // // CODE
 
+alive();
 if (instance_exists(obj_player)) {
 	go_to_player();
 } else {
@@ -28,5 +29,11 @@ function go_to_player(){
 		} else {
 			y += movespeed;
 		}
+	}
+}
+
+function alive() {
+	if (hp <= 0) {
+	 instance_destroy();
 	}
 }
