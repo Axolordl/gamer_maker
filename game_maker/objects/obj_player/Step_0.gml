@@ -14,9 +14,8 @@ if !instance_exists(obj_pauser) {
 	pause();
 }
 
-if !would_collide() {
-	move();
-}
+would_collide();
+move();
 
 shoot();
 
@@ -41,15 +40,15 @@ function get_move_keys(){
 
 // wall collision
 function would_collide(){
+	// check & set spd[X]
 	if place_meeting(x + spd[X], y, obj_wall) == true {
 		spd[X] = 0;
-		return true;
-	} else if place_meeting(x, y + spd[Y], obj_wall) == true {
-		spd[Y] = 0;
-		return true;
-	} else {
-		return false;
 	}
+	
+	// check & set spd[Y]
+	if place_meeting(x, y + spd[Y], obj_wall) == true {´
+		spd[Y] = 0;
+	} 
 }
 
 
