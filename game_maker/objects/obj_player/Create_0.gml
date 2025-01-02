@@ -14,7 +14,7 @@ healthbar_y = 20;
 
 // keyboard & control
 move_keys = [];
-
+cooldown = 0; // I think 60 = 1s, so X*60 = Xs
 
 // movement & direction
 move_spd = 1;

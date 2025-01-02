@@ -14,9 +14,8 @@ if !instance_exists(obj_pauser) {
 	pause();
 }
 
-if !would_collide() {
-	move();
-}
+would_collide();
+move();
 
 shoot();
 
@@ -41,15 +40,15 @@ function get_move_keys(){
 
 // wall collision
 function would_collide(){
+	// check & set spd[X]
 	if place_meeting(x + spd[X], y, obj_wall) == true {
 		spd[X] = 0;
-		return true;
-	} else if place_meeting(x, y + spd[Y], obj_wall) == true {
-		spd[Y] = 0;
-		return true;
-	} else {
-		return false;
 	}
+	
+	// check & set spd[Y]
+	if place_meeting(x, y + spd[Y], obj_wall) == true {
+		spd[Y] = 0;
+	} 
 }
 
 
@@ -95,19 +94,24 @@ function set_sprite(){
 	sprite_index = sprite[face];
 }
 
-function set_depth(){
+function set_depth() {
 	depth = -bbox_bottom;
 }
 
 function shoot() {
-	if (mouse_check_button_pressed(mb_left)) {
-		var angle = point_direction(x, y, mouse_x, mouse_y); //The Direction in which we aim
-		//To spawn the projectile in front of the weapon (Staff is 23px long)
-		var offset_x = lengthdir_x(24, angle); 
-		var offset_y = lengthdir_y(24, angle);
-		var bullet_x = x + offset_x;
-		var bullet_y = y + offset_y;
-		var bullet = instance_create_layer(bullet_x, bullet_y, "Projectiles", obj_Bullet);
-		bullet.direction = angle;
-	}
+	if cooldown == 0 {
+		if (mouse_check_button_pressed(mb_left)) {
+			angle = point_direction(x, y, mouse_x, mouse_y); //The Direction in which we aim
+			//To spawn the projectile in front of the weapon (Staff is 23px long)
+			var offset_x = lengthdir_x(24, angle); 
+			var offset_y = lengthdir_y(24, angle);
+			var bullet_x = x + offset_x;
+			var bullet_y = y + offset_y;
+			var bullet = instance_create_layer(bullet_x, bullet_y, "Projectiles", obj_Bullet);
+			bullet.direction = angle;
+			
+			// reset cooldown
+			cooldown = 0.5*60; // = ~1sec
+		}	
+	} else { cooldown -= 1;} // cool down
 }
