@@ -46,7 +46,7 @@ function would_collide(){
 	}
 	
 	// check & set spd[Y]
-	if place_meeting(x, y + spd[Y], obj_wall) == true {´
+	if place_meeting(x, y + spd[Y], obj_wall) == true {
 		spd[Y] = 0;
 	} 
 }
