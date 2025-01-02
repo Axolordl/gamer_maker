@@ -1,16 +1,14 @@
 // // CODE
 
-alive();
+death();
 if (instance_exists(obj_player)) {
 	go_to_player();
 } else {
 	movespeed = 0;	
 }
 
-
 //depth
 depth = -bbox_bottom;
-
 
 // // FUNCTIONS
 function go_to_player(){
@@ -32,7 +30,7 @@ function go_to_player(){
 	}
 }
 
-function alive() {
+function death() {
 	if (hp <= 0) {
 	 instance_destroy();
 	}

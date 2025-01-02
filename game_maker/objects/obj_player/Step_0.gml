@@ -94,14 +94,14 @@ function set_sprite(){
 	sprite_index = sprite[face];
 }
 
-function set_depth(){
+function set_depth() {
 	depth = -bbox_bottom;
 }
 
 function shoot() {
 	if cooldown == 0 {
 		if (mouse_check_button_pressed(mb_left)) {
-			var angle = point_direction(x, y, mouse_x, mouse_y); //The Direction in which we aim
+			angle = point_direction(x, y, mouse_x, mouse_y); //The Direction in which we aim
 			//To spawn the projectile in front of the weapon (Staff is 23px long)
 			var offset_x = lengthdir_x(24, angle); 
 			var offset_y = lengthdir_y(24, angle);
@@ -111,7 +111,7 @@ function shoot() {
 			bullet.direction = angle;
 			
 			// reset cooldown
-			cooldown = 1*60; // = ~1sec
+			cooldown = 0.5*60; // = ~1sec
 		}	
 	} else { cooldown -= 1;} // cool down
 }
