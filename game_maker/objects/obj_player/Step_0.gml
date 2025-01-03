@@ -24,6 +24,7 @@ set_face();
 set_sprite();
 set_depth(); 
 
+
 // // FUNCTIONS
 
 // controlls
@@ -111,7 +112,7 @@ function shoot() {
 			bullet.direction = angle;
 			
 			// reset cooldown
-			cooldown = 0.5*60; // = ~1sec
+			cooldown = 0.5*60; // = ~0,5sec
 		}	
 	} else { cooldown -= 1;} // cool down
 }
