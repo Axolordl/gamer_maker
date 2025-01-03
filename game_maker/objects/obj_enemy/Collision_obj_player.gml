@@ -5,15 +5,26 @@ push_back();
 
 // // Functions
 function push_back() {
+	//Added in every Move a If which checks if it would collide with a Wall
 	if obj_player.x < x {
-		x += 10;
+		if (!place_meeting(x + 10, y, obj_wall)) {
+			x += 10;
+		}
+		
 	} else {
-		x -= 10;	
+		if (!place_meeting(x - 10, y, obj_wall)) {
+			x -= 10;
+		}
 	}
 	
 	if obj_player.y < y {
-		y += 10;
+		if (!place_meeting(x, y + 10, obj_wall)) {
+			y += 10;
+		}
 	} else {
-		y -= 10;	
+		if (!place_meeting(x, y - 10, obj_wall)) {
+			y -= 10;
+		}
+			
 	}
 }
