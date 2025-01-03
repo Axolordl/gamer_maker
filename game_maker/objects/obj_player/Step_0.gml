@@ -17,7 +17,7 @@ if !instance_exists(obj_pauser) {
 would_collide();
 move();
 
-//shoot();
+shoot();
 
 // sprite stuff
 set_face();
