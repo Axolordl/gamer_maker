@@ -3,7 +3,7 @@
 // Speichere die ID des getroffenen Gegners
 var hit = instance_place(x, y, obj_enemy);  // Holt die Instanz des getroffenen Gegners
 
-	// Überprüfen, ob eine Instanz gefunden wurde
+// Überprüfen, ob eine Instanz gefunden wurde
 if (hit != noone) {
 new_x = hit.x - obj_player.x;
 new_y = hit.y - obj_player.y;

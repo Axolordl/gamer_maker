@@ -1,68 +1,35 @@
 // // CODE
-
 death();
 
-if (collision_circle(x, y, 50, obj_player, false, false)) {
+if (collision_circle(x, y, detection_radius, obj_player, false, false)) {
 	saw_player = true;
 }
 
 if (instance_exists(obj_player) && saw_player == true) {
-	//go_to_player();
-	set_sprite();
-	mp_linear_step_object(obj_player.x, obj_player.y, 0.8, obj_wall);
+	speed = 0.3;
+	mp_linear_step_object(obj_player.x, obj_player.y, speed, obj_wall);
 } else {
-	set_sprite(IDLE);
+	speed = 0;
 }
-
-
-//depth
-depth = -bbox_bottom;
+set_sprite();
 
 // // FUNCTIONS
 
 // movement
 
-function set_sprite(face="") { // THIS IS A BIT FUCKED
-	direct = point_direction(x, y, obj_player.x, obj_player.y);
-	show_debug_message(direct);
-	
-	if face != IDLE {
-		if direct >= 0 {
-			if direct >= 90 {
-				if direct >= 270 {
-					face = RIGHT
-				} else {face = LEFT}
-			} else {face = RIGHT;}
+function set_sprite() {
+	if (speed == 0) {
+		face = IDLE;
+	} else {
+		direct = point_direction(x, y, obj_player.x, obj_player.y);
+		if (direct >= 90 && direct <= 270) {
+			face = LEFT;
+		} else {
+			face = RIGHT;
 		}
 	}
-	sprite_index = sprite[face]
-	mask_index = sprite[face] // redundant?
-	
-	
-	//} else {
-	//	sprite_index = sprite[LEFT] or sprite[RIGHT];
-	//}
+	sprite_index = sprite[face];
 }
-
-// ! Deprecated !
-//function go_to_player(){
-//	// go to player X
-//	if (obj_player.x) != x{
-//		if obj_player.x < x{
-//			x -= movespeed;
-//		} else {
-//			x += movespeed;
-//		}
-//	}	
-//	// go to player Y
-//	if obj_player.y != y{
-//		if obj_player.y < y{
-//			y -= movespeed;
-//		} else {
-//			y += movespeed;
-//		}
-//	}
-//}
 
 function death() {
 	if (hp <= 0) {
