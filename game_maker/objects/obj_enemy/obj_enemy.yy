@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_boss_minion_idle",
-    "path":"sprites/spr_boss_minion_idle/spr_boss_minion_idle.yy",
+    "name":"spr_boss_minion_right",
+    "path":"sprites/spr_boss_minion_right/spr_boss_minion_right.yy",
   },
   "spriteMaskId":null,
   "visible":true,

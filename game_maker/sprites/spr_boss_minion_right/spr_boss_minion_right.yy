@@ -16,7 +16,6 @@
     {"$GMSpriteFrame":"","%Name":"329edb34-b98c-4ac5-abff-c6b9c8011dd9","name":"329edb34-b98c-4ac5-abff-c6b9c8011dd9","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"eee40ff0-2696-498f-b5b6-6cc9f86d77b3","name":"eee40ff0-2696-498f-b5b6-6cc9f86d77b3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"0f1b6192-d3ac-4426-88a6-ed4507b94589","name":"0f1b6192-d3ac-4426-88a6-ed4507b94589","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"11330272-5f2a-4c32-a720-cda9438e251a","name":"11330272-5f2a-4c32-a720-cda9438e251a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -27,7 +26,7 @@
   ],
   "name":"spr_boss_minion_right",
   "nineSlice":null,
-  "origin":0,
+  "origin":7,
   "parent":{
     "name":"Enemies",
     "path":"folders/Sprites/Dungeon/Enemies.yy",
@@ -53,7 +52,7 @@
     },
     "eventStubScript":null,
     "eventToFunction":{},
-    "length":5.0,
+    "length":4.0,
     "lockOrigin":false,
     "moments":{
       "$KeyframeStore<MomentsEventKeyframe>":"",
@@ -84,15 +83,12 @@
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"0f1b6192-d3ac-4426-88a6-ed4507b94589","path":"sprites/spr_boss_minion_right/spr_boss_minion_right.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"d31d1942-2ba1-40ad-8030-f29f1cf5440c","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"11330272-5f2a-4c32-a720-cda9438e251a","path":"sprites/spr_boss_minion_right/spr_boss_minion_right.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"89f99491-983a-403e-9184-2552c893679f","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":0,
-    "yorigin":0,
+    "xorigin":7,
+    "yorigin":21,
   },
   "swatchColours":null,
   "swfPrecision":0.5,
