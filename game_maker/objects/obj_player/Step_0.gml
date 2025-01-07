@@ -1,5 +1,7 @@
 // // CODE
 
+change_Player_Class();
+
 //Check if Health is above 0, if not die
 if (hp <= 0) {
 	instance_destroy(self);	
@@ -16,8 +18,7 @@ if !instance_exists(obj_pauser) {
 
 would_collide();
 move();
-
-shoot();
+//shoot();
 
 // sprite stuff
 set_face();
@@ -91,7 +92,7 @@ function set_sprite(){
 	if spd[X] == 0 && spd[Y] == 0{
 		image_index = 0;
 	} 
-	mask_index = sprite[face];
+	//mask_index = sprite[face];
 	sprite_index = sprite[face];
 }
 
@@ -99,20 +100,45 @@ function set_depth() {
 	depth = -bbox_bottom;
 }
 
-function shoot() {
-	if cooldown == 0 {
-		if (mouse_check_button_pressed(mb_left)) {
-			angle = point_direction(x, y, mouse_x, mouse_y); //The Direction in which we aim
-			//To spawn the projectile in front of the weapon (Staff is 23px long)
-			var offset_x = lengthdir_x(24, angle); 
-			var offset_y = lengthdir_y(24, angle);
-			var bullet_x = x + offset_x;
-			var bullet_y = y + offset_y;
-			var bullet = instance_create_layer(bullet_x, bullet_y, "Projectiles", obj_Bullet);
-			bullet.direction = angle;
+function change_Player_Class() {
+	
+	if (collision_circle(x, y, 30, obj_Pickup_Knight_Class, false, false)) {
+		
+		// Überprüfen, ob der Spieler sich in der Nähe des Pickups befindet
+		if (keyboard_check(ord("E"))) {
 			
-			// reset cooldown
-			cooldown = 0.5*60; // = ~0,5sec
-		}	
-	} else { cooldown -= 1;} // cool down
+	    // Ersetze die Instanz von player1 mit player2
+	    instance_destroy();  // Lösche das aktuelle Objekt
+	    instance_create_layer(x, y, "Character_Class", obj_Knight_Class);  // Erstelle die neue Instanz
+		}
+	}
+	
+	if (collision_circle(x, y, 30, obj_Pickup_Mage_Class, false, false)) {
+		
+		// Überprüfen, ob der Spieler sich in der Nähe des Pickups befindet
+		if (keyboard_check(ord("E"))) {
+			
+	    // Ersetze die Instanz von player1 mit player2
+	    instance_destroy();  // Lösche das aktuelle Objekt
+	    instance_create_layer(x, y, "Character_Class", obj_Mage_Class);  // Erstelle die neue Instanz
+		}
+	}
 }
+
+//function shoot() {
+//	if cooldown == 0 {
+//		if (mouse_check_button_pressed(mb_left)) {
+//			angle = point_direction(x, y, mouse_x, mouse_y); //The Direction in which we aim
+//			//To spawn the projectile in front of the weapon (Staff is 23px long)
+//			var offset_x = lengthdir_x(24, angle); 
+//			var offset_y = lengthdir_y(24, angle);
+//			var bullet_x = x + offset_x;
+//			var bullet_y = y + offset_y;
+//			var bullet = instance_create_layer(bullet_x, bullet_y, "Projectiles", obj_Bullet);
+//			bullet.direction = angle;
+			
+//			// reset cooldown
+//			cooldown = 0.5*60; // = ~0,5sec
+//		}	
+//	} else { cooldown -= 1;} // cool down
+//}

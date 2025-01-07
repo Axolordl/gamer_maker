@@ -8,8 +8,8 @@
   "name":"obj_drawer_flower",
   "overriddenProperties":[],
   "parent":{
-    "name":"HouseDecorations",
-    "path":"folders/Objekte/HouseDecorations.yy",
+    "name":"House",
+    "path":"folders/Objekte/House.yy",
   },
   "parentObjectId":{
     "name":"obj_wall",
