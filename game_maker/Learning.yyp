@@ -120,8 +120,8 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"rm_Game_bedroom","path":"rooms/rm_Game_bedroom/rm_Game_bedroom.yy",},},
     {"roomId":{"name":"rm_dungeon_entrance","path":"rooms/rm_dungeon_entrance/rm_dungeon_entrance.yy",},},
+    {"roomId":{"name":"rm_Game_bedroom","path":"rooms/rm_Game_bedroom/rm_Game_bedroom.yy",},},
     {"roomId":{"name":"rm_Mainmenu","path":"rooms/rm_Mainmenu/rm_Mainmenu.yy",},},
     {"roomId":{"name":"rm_homebase","path":"rooms/rm_homebase/rm_homebase.yy",},},
   ],
