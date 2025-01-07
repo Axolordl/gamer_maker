@@ -8,7 +8,7 @@ if (collision_circle(x, y, 15, obj_player, false, true)) {
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_middle);
 
-	draw_text_transformed(x,y - 25, "Play Knight", 0.15, 0.15, 0);
+	draw_text_transformed(x,y - 25, "Play Mage", 0.15, 0.15, 0);
 
 	// Reset the X and Y alignment to the top left
 	draw_set_halign(fa_left);
