@@ -6,7 +6,7 @@ max_hp = hp;
 saw_player = false;
 
 //Speed
-speed = 0;
+movespeed = 0;
 
 // sprites
 face = IDLE
