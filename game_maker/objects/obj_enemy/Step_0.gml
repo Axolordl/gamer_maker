@@ -20,7 +20,11 @@ if (instance_exists(obj_player) && saw_player == true) {
 	movespeed = 0;
 	set_sprite();
 }
+
 //set_sprite();
+
+//Set depth
+depth = -bbox_bottom;
 
 // // FUNCTIONS
 
