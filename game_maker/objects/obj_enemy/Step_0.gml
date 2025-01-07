@@ -1,7 +1,7 @@
 // // CODE
 death();
 
-if (collision_circle(x, y, detection_radius, obj_player, false, false)) {
+if (collision_circle(x, y, detection_radius, obj_player, false, false) || hp < max_hp) {
 	saw_player = true;
 }
 
