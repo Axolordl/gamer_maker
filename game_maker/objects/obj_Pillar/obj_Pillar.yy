@@ -15,7 +15,7 @@
     "name":"obj_wall",
     "path":"objects/obj_wall/obj_wall.yy",
   },
-  "persistent":true,
+  "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
   "physicsFriction":0.2,
