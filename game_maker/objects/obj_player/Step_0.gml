@@ -105,7 +105,7 @@ function change_Player_Class() {
 	if (collision_circle(x, y, 30, obj_Pickup_Knight_Class, false, false)) {
 		
 		// Überprüfen, ob der Spieler sich in der Nähe des Pickups befindet
-		if (keyboard_check(ord("E"))) {
+		if (keyboard_check_pressed(ord("E"))) {
 			
 	    // Ersetze die Instanz von player1 mit player2
 	    instance_destroy();  // Lösche das aktuelle Objekt
@@ -116,7 +116,7 @@ function change_Player_Class() {
 	if (collision_circle(x, y, 30, obj_Pickup_Mage_Class, false, false)) {
 		
 		// Überprüfen, ob der Spieler sich in der Nähe des Pickups befindet
-		if (keyboard_check(ord("E"))) {
+		if (keyboard_check_pressed(ord("E"))) {
 			
 	    // Ersetze die Instanz von player1 mit player2
 	    instance_destroy();  // Lösche das aktuelle Objekt
