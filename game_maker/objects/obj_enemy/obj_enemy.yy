@@ -12,8 +12,8 @@
   "name":"obj_enemy",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objekte",
-    "path":"folders/Objekte.yy",
+    "name":"Dungeon",
+    "path":"folders/Objekte/Dungeon.yy",
   },
   "parentObjectId":null,
   "persistent":false,
