@@ -8,11 +8,6 @@ if (collision_circle(x, y, detection_radius, obj_player, false, false) || hp < m
 }
 
 if (instance_exists(obj_player) && saw_player == true) {
-	//speed = 0.3;
-	
-	//// Speichere aktuelle Position
-	//mp_linear_step_object(obj_player.x, obj_player.y, movespeed, obj_wall);
-	
 	//Moves the Enemy to the Player position while avoiding obstacles
 	movespeed = 0.5;
 	mp_potential_step_object(obj_player.x, obj_player.y, movespeed, obj_wall);
@@ -23,12 +18,11 @@ if (instance_exists(obj_player) && saw_player == true) {
 	set_sprite();
 }
 
-//set_sprite();
-
-////Set depth
-//depth = -bbox_bottom;
-
 knockback();
+
+
+
+
 
 // // FUNCTIONS
 
