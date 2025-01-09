@@ -1,11 +1,7 @@
 // // CODE
 death();
-
 set_depth_neg_bboxbottom();
-
-if (collision_circle(x, y, detection_radius, obj_player, false, false) || hp < max_hp) {
-	saw_player = true;
-}
+detect_Player_inRadius();
 
 if (instance_exists(obj_player) && saw_player == true) {
 	//Moves the Enemy to the Player position while avoiding obstacles
@@ -32,7 +28,7 @@ function set_sprite() {
 	if (movespeed == 0) {
 		face = IDLE;
 	} else {
-		direct = point_direction(x, y, obj_player.x, obj_player.y);
+		var direct = point_direction(x, y, obj_player.x, obj_player.y);
 		if (direct >= 90 && direct <= 270) {
 			face = LEFT;
 		} else {
@@ -69,4 +65,10 @@ function knockback() {
         knockback_y = 0;
     }
  }
+}
+
+function detect_Player_inRadius() {
+	if (collision_circle(x, y, detection_radius, obj_player, false, false) || hp < max_hp) {
+		saw_player = true;
+	}
 }
