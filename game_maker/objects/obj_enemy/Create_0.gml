@@ -9,7 +9,7 @@ saw_player = false;
 movespeed = 0;
 
 // sprites
-face = IDLE
+face = IDLE;
 
 sprite[IDLE] = spr_boss_minion_idle
 sprite[RIGHT] = spr_boss_minion_right
