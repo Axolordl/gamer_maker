@@ -20,3 +20,8 @@ mask_index = sprite[IDLE];
 
 //Detection Radius
 detection_radius = 30;
+
+//Knockback Stuff
+knockback_x = 0;
+knockback_y = 0;
+knockback_timer = 0;
