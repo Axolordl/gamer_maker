@@ -62,6 +62,7 @@
     {"id":{"name":"obj_drawer_books","path":"objects/obj_drawer_books/obj_drawer_books.yy",},},
     {"id":{"name":"obj_drawer_flower","path":"objects/obj_drawer_flower/obj_drawer_flower.yy",},},
     {"id":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},},
+    {"id":{"name":"obj_first_boss","path":"objects/obj_first_boss/obj_first_boss.yy",},},
     {"id":{"name":"obj_Knight_Class","path":"objects/obj_Knight_Class/obj_Knight_Class.yy",},},
     {"id":{"name":"obj_Mage_Class","path":"objects/obj_Mage_Class/obj_Mage_Class.yy",},},
     {"id":{"name":"obj_pauser","path":"objects/obj_pauser/obj_pauser.yy",},},
