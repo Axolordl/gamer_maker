@@ -46,12 +46,15 @@ function death() {
 	
 function knockback() {
 	if (knockback_timer > 0) {
+		
     // Prüfe Kollision mit einer Wand
-    if (!place_meeting(x + knockback_x, y + knockback_y, obj_wall)) {
-        x += knockback_x;
-        y += knockback_y;
-    }
-
+    if (!place_meeting(x + knockback_x, y, obj_wall)) {
+		x += knockback_x;
+	}
+	
+	if (!place_meeting(x, y + knockback_y, obj_wall)) {
+	    y += knockback_y;
+	}
     // Reduziere den Knockback-Timer
     knockback_timer -= 1;
 
