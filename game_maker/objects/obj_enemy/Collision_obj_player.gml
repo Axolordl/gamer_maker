@@ -1,10 +1,10 @@
 //Push Enemy back if he collides with Player
 
 // // Code
-push_back();
+knockback();
 
 // // Functions
-function push_back() {
+function knockback() {
 	//Added in every Move a If which checks if it would collide with a Wall
 	if obj_player.x < x {
 		if (!place_meeting(x + 10, y, obj_wall)) {

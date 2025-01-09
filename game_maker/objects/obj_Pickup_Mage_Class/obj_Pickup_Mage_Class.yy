@@ -9,8 +9,8 @@
   "name":"obj_Pickup_Mage_Class",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objekte",
-    "path":"folders/Objekte.yy",
+    "name":"Player and Classes",
+    "path":"folders/Objekte/Player and Classes.yy",
   },
   "parentObjectId":null,
   "persistent":false,
