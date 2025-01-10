@@ -103,6 +103,7 @@
     {"id":{"name":"spr_drawer_flower","path":"sprites/spr_drawer_flower/spr_drawer_flower.yy",},},
     {"id":{"name":"spr_enemie_mage","path":"sprites/spr_enemie_mage/spr_enemie_mage.yy",},},
     {"id":{"name":"spr_Enemy_Bullet","path":"sprites/spr_Enemy_Bullet/spr_Enemy_Bullet.yy",},},
+    {"id":{"name":"spr_Enemy_Mage_Staff","path":"sprites/spr_Enemy_Mage_Staff/spr_Enemy_Mage_Staff.yy",},},
     {"id":{"name":"spr_enemy_skull_idle","path":"sprites/spr_enemy_skull_idle/spr_enemy_skull_idle.yy",},},
     {"id":{"name":"spr_enemy","path":"sprites/spr_enemy/spr_enemy.yy",},},
     {"id":{"name":"spr_first_boss_idle","path":"sprites/spr_first_boss_idle/spr_first_boss_idle.yy",},},
