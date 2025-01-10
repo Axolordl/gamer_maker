@@ -2,4 +2,4 @@
 
 new_x = 0;
 new_y = 0;
-speed = 1;
+speed = 0.9;
