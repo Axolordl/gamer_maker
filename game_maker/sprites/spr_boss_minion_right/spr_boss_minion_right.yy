@@ -48,8 +48,8 @@
   },
   "origin":7,
   "parent":{
-    "name":"Enemies",
-    "path":"folders/Sprites/Dungeon/Enemies.yy",
+    "name":"Boss Minion",
+    "path":"folders/Sprites/Dungeon/Enemies/Boss Minion.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

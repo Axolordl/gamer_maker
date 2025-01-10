@@ -27,8 +27,8 @@
   "nineSlice":null,
   "origin":9,
   "parent":{
-    "name":"Enemies",
-    "path":"folders/Sprites/Dungeon/Enemies.yy",
+    "name":"Mage",
+    "path":"folders/Sprites/Dungeon/Enemies/Mage.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

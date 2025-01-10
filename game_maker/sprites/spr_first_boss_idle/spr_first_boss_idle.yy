@@ -27,8 +27,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Enemies",
-    "path":"folders/Sprites/Dungeon/Enemies.yy",
+    "name":"First Boss",
+    "path":"folders/Sprites/Dungeon/Enemies/First Boss.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
