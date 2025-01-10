@@ -32,7 +32,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_boss_minion_idle",
+    "path":"sprites/spr_boss_minion_idle/spr_boss_minion_idle.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

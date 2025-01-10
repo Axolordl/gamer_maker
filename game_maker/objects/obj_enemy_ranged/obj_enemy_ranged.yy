@@ -33,7 +33,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_enemie_mage",
+    "path":"sprites/spr_enemie_mage/spr_enemie_mage.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

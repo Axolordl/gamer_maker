@@ -19,7 +19,7 @@ sprite[LEFT] =  spr_boss_minion_left
 mask_index = sprite[IDLE];
 
 //Detection Radius
-detection_radius = 30;
+detection_radius = 50;
 
 //Knockback Stuff
 knockback_x = 0;
