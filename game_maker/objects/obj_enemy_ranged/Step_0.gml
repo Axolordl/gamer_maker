@@ -38,11 +38,31 @@ if (instance_exists(obj_player) && saw_player == true) {
         // Zu weit: Bewege dich zum Spieler hin
         mp_potential_step_object(obj_player.x, obj_player.y, movespeed, obj_wall);
     } else {
+		
+		//Old Movement You Can Fuck around with it and see which looks better
+		
         // Innerhalb des Bereichs: Bewege dich seitlich um den Spieler
-        var side_move_dir = direction_to_player + choose(-90, 90); // Bewege dich seitlich
-        var target_x = x + lengthdir_x(10000, side_move_dir); // Je höher der Wert für Length ist, desto größere Bögen macht der Gegner
-        var target_y = y + lengthdir_y(10000, side_move_dir);
-        mp_potential_step_object(target_x, target_y, movespeed, obj_wall);
+        //var side_move_dir = direction_to_player + choose(-90, 90); // Bewege dich seitlich
+        //var target_x = x + lengthdir_x(10000, side_move_dir); // Je höher der Wert für Length ist, desto größere Bögen macht der Gegner
+        //var target_y = y + lengthdir_y(10000, side_move_dir);
+        //mp_potential_step_object(target_x, target_y, movespeed, obj_wall);
+		
+		//Timer für Richtungswechsel
+
+		if (side_move_timer <= 0) {
+		    // Neue Richtung bestimmen, wenn Timer abgelaufen ist
+		    side_move_dir = direction_to_player + choose(-90, 90);
+		    side_move_timer = 45; // Anzahl der Steps bis zum nächsten Wechsel
+		} else {
+		    side_move_timer--;
+		}
+		
+		var target_x = x + lengthdir_x(5, side_move_dir);
+		var target_y = y + lengthdir_y(5, side_move_dir);
+		
+		if (!place_meeting(target_x, target_y, obj_wall)) {
+			mp_potential_step_object(target_x, target_y, movespeed, obj_wall);
+		}
     }
 
     // Aktualisiere die Animationen/Sprites
