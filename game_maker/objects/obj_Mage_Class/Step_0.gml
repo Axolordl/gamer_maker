@@ -16,7 +16,7 @@ function shoot() {
 			var offset_y = lengthdir_y(24, angle);
 			var bullet_x = x + offset_x;
 			var bullet_y = y + offset_y;
-			var bullet = instance_create_layer(bullet_x, bullet_y, "Projectiles", obj_Bullet);
+			var bullet = instance_create_layer(bullet_x, bullet_y, "Projectiles", obj_Player_Bullet);
 			bullet.direction = angle;
 			
 			// reset cooldown
