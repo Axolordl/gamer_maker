@@ -52,7 +52,20 @@ switch (face) {
 }
 
 if (face == LEFT) {
+	//IF we are moving to the left we have to rotate the weapon to the left (90)
 	draw_sprite_ext(spr_Knight_Sword, 0, weapon_x, weapon_y, 1, 1, 90, c_white, 1);
 } else {
-	draw_sprite_ext(spr_Knight_Sword, 0, weapon_x, weapon_y, 1, 1, 0, c_white, 1);
+	//IF we are moving Up we have to draw the weaopon first and after that the player, so that the weapon is behind the player
+	if (face == UP) {
+		draw_sprite_ext(spr_Knight_Sword, 0, weapon_x, weapon_y, 1, 1, 0, c_white, 1);
+		draw_self();
+	} else {
+		draw_self();
+		draw_sprite_ext(spr_Knight_Sword, 0, weapon_x, weapon_y, 1, 1, 0, c_white, 1);
+		}
 }
+
+
+
+
+
