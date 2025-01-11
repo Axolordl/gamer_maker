@@ -117,6 +117,7 @@
     {"id":{"name":"spr_Knight_Idle","path":"sprites/spr_Knight_Idle/spr_Knight_Idle.yy",},},
     {"id":{"name":"spr_Knight_Left","path":"sprites/spr_Knight_Left/spr_Knight_Left.yy",},},
     {"id":{"name":"spr_Knight_Right","path":"sprites/spr_Knight_Right/spr_Knight_Right.yy",},},
+    {"id":{"name":"spr_Knight_Sword","path":"sprites/spr_Knight_Sword/spr_Knight_Sword.yy",},},
     {"id":{"name":"spr_Knight_Up","path":"sprites/spr_Knight_Up/spr_Knight_Up.yy",},},
     {"id":{"name":"spr_Mage_Idle","path":"sprites/spr_Mage_Idle/spr_Mage_Idle.yy",},},
     {"id":{"name":"spr_pedestal","path":"sprites/spr_pedestal/spr_pedestal.yy",},},

@@ -20,6 +20,9 @@
   "height":64,
   "HTile":false,
   "layers":[
+    {"$GMImageFolderLayer":"","%Name":"2153c43d-ae19-4b05-9d6a-902ef72def95","blendMode":0,"displayName":"Layer Group 1","isLocked":false,"layers":[
+        {"$GMImageLayer":"","%Name":"4b2071bc-7f6c-4f6f-a2b5-151cdd4796f2","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"4b2071bc-7f6c-4f6f-a2b5-151cdd4796f2","opacity":51.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+      ],"name":"2153c43d-ae19-4b05-9d6a-902ef72def95","opacity":100.0,"resourceType":"GMImageFolderLayer","resourceVersion":"2.0","visible":true,},
     {"$GMImageLayer":"","%Name":"01df8972-1845-4b5d-bc91-c5a72e8e09bb","blendMode":0,"displayName":"default","isLocked":false,"name":"01df8972-1845-4b5d-bc91-c5a72e8e09bb","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"Sprite40",
