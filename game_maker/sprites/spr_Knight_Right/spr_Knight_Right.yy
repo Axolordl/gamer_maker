@@ -22,6 +22,9 @@
   "height":21,
   "HTile":false,
   "layers":[
+    {"$GMImageFolderLayer":"","%Name":"33b8699e-efcc-4e76-8afd-b833cde85797","blendMode":0,"displayName":"Layer Group 1","isLocked":false,"layers":[
+        {"$GMImageLayer":"","%Name":"30e660c8-b110-4191-9d9e-d31e62b5feef","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"30e660c8-b110-4191-9d9e-d31e62b5feef","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":false,},
+      ],"name":"33b8699e-efcc-4e76-8afd-b833cde85797","opacity":100.0,"resourceType":"GMImageFolderLayer","resourceVersion":"2.0","visible":true,},
     {"$GMImageLayer":"","%Name":"dc3bbb1f-b349-40d0-ab36-13120648a0db","blendMode":0,"displayName":"default","isLocked":false,"name":"dc3bbb1f-b349-40d0-ab36-13120648a0db","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_Knight_Right",
