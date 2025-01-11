@@ -109,6 +109,7 @@ function change_Player_Class() {
 	    // Ersetze die Instanz von player1 mit player2
 	    instance_destroy();  // Lösche das aktuelle Objekt
 	    instance_create_layer(x, y, "Character_Class", obj_Knight_Class);  // Erstelle die neue Instanz
+		instance_create_layer(x, y, "Character_Class", obj_Weapon_Sword); // Create Weapon For Knight
 		}
 	}
 	
