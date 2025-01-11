@@ -1,16 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"obj_Weapon",
-  "eventList":[],
+  "%Name":"obj_Weapon_Sword",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"obj_Weapon",
+  "name":"obj_Weapon_Sword",
   "overriddenProperties":[],
   "parent":{
     "name":"Weapon",
     "path":"folders/Objekte/Weapon.yy",
   },
   "parentObjectId":null,
-  "persistent":false,
+  "persistent":true,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
   "physicsFriction":0.2,
@@ -28,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_Staff",
-    "path":"sprites/spr_Staff/spr_Staff.yy",
+    "name":"spr_Knight_Sword",
+    "path":"sprites/spr_Knight_Sword/spr_Knight_Sword.yy",
   },
   "spriteMaskId":null,
   "visible":true,
