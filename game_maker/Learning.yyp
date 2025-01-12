@@ -94,6 +94,7 @@
     {"id":{"name":"scr_depth","path":"scripts/scr_depth/scr_depth.yy",},},
     {"id":{"name":"scr_macros","path":"scripts/scr_macros/scr_macros.yy",},},
     {"id":{"name":"spr_bed","path":"sprites/spr_bed/spr_bed.yy",},},
+    {"id":{"name":"spr_boss_minion_attack","path":"sprites/spr_boss_minion_attack/spr_boss_minion_attack.yy",},},
     {"id":{"name":"spr_boss_minion_idle","path":"sprites/spr_boss_minion_idle/spr_boss_minion_idle.yy",},},
     {"id":{"name":"spr_boss_minion_left","path":"sprites/spr_boss_minion_left/spr_boss_minion_left.yy",},},
     {"id":{"name":"spr_boss_minion_right","path":"sprites/spr_boss_minion_right/spr_boss_minion_right.yy",},},
