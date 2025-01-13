@@ -1,6 +1,6 @@
 // // Code
 
-if (instance_exists(obj_player)) {
+if (instance_exists(obj_Knight_Class)) {
 	Update_Weapon_Position();
 } else {
 	instance_destroy();
