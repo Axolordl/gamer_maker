@@ -77,9 +77,11 @@ function Update_Weapon_Position () {
 	
 function perform_attack() {
 	// Angriff auslösen, wenn die linke Maustaste gedrückt wird
-	if (mouse_check_button_pressed(mb_left) && attack_cd <= 0) {
+	if (mouse_check_button_pressed(mb_left) && can_attack == true) {
 	    sprite_index = attack_side; // Angriffssprite setzen
-	    attack_cd = 60; // 60 = ca. 1s
+	    //set an alarm to a given time (attack_cd), in the alarm event we just set can_attack to true again
+		alarm[0] = attack_cd;
+		can_attack = false;
 	}
 
 	// Angriffssprite abspielen
@@ -90,7 +92,7 @@ function perform_attack() {
 	}
 
 	// Cooldown reduzieren
-	if (attack_cd > 0) {
-	    attack_cd--;
-	}
+	//if (attack_cd > 0) {
+	//    attack_cd--;
+	//}
 }
