@@ -16,4 +16,3 @@ sprite[RIGHT] = spr_Knight_Right;
 sprite[UP] = spr_Knight_Up;
 sprite[LEFT] = spr_Knight_Left;
 sprite[DOWN] = spr_Knight_Down;
-

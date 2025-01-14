@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":9,
   "parent":{
-    "name":"Weapon",
-    "path":"folders/Sprites/Weapon.yy",
+    "name":"Knight Sword",
+    "path":"folders/Sprites/Weapon/Knight Sword.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

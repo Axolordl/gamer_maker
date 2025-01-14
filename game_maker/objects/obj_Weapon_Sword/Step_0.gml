@@ -1,15 +1,14 @@
 // // Code
 
-if (instance_exists(obj_player)) {
+if (instance_exists(obj_Knight_Class)) {
 	Update_Weapon_Position();
+	perform_attack();
 } else {
 	instance_destroy();
 }
 
 
-
 // // Functions
-
 function Update_Weapon_Position () {
 	// Bestimme die Waffe-Position basierend auf der Animation
 	var frame = floor(obj_player.image_index); // Aktueller Frame der Animation
@@ -75,4 +74,38 @@ function Update_Weapon_Position () {
 	    depth = obj_player.depth - 1; // Waffe vor dem Spieler
 		}
 }
+	
+function perform_attack() {
+	// Angriff auslösen, wenn die linke Maustaste gedrückt wird
+	if (mouse_check_button_pressed(mb_left) && can_attack == true) {
+	    sprite_index = attack_side; // Angriffssprite setzen
+	    //set an alarm to a given time (attack_cd), in the alarm event we just set can_attack to true again
+		alarm[0] = attack_cd;
+		can_attack = false;
+		
+		if (image_xscale == -1) {
+			//create a mirrored hitbox for swinging left
+			var hitbox = instance_create_layer(x - 5, y, "Character_Class", obj_Hitbox_Parent);
+			hitbox.image_xscale = -1;
+		} else {
+			//create a hitbox for swinging right
+			var hitbox = instance_create_layer(x + 5, y, "Character_Class", obj_Hitbox_Parent);
+			hitbox.image_xscale = 1;
+		}
+		//set an alarm to 24 steps, which destroys the hitbox after the alarm reaches 0
+		alarm[1] = 24;
+	}
 
+	// Angriffssprite abspielen
+	if (sprite_index == attack_side) {
+	    if (image_index >= image_number) { // Letzter Frame der Animation erreicht?
+	        sprite_index = attack_idle; // Zurück zum Standardsprite
+	    }
+	}
+
+	// Cooldown reduzieren
+	//if (attack_cd > 0) {
+	//    attack_cd--;
+	//}
+}
+	
