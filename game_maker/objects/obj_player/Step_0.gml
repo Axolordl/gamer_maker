@@ -101,26 +101,29 @@ function set_depth() {
 
 function change_Player_Class() {
 	
-	if (collision_circle(x, y, 30, obj_Pickup_Knight_Class, false, false)) {
-		
+	if (collision_circle(x, y, 30, obj_Pickup_Knight_Class, false, false)) {	
 		// Überprüfen, ob der Spieler sich in der Nähe des Pickups befindet
-		if (keyboard_check_pressed(ord("E"))) {
-			
-	    // Ersetze die Instanz von player1 mit player2
-	    instance_destroy();  // Lösche das aktuelle Objekt
-	    instance_create_layer(x, y, "Character_Class", obj_Knight_Class);  // Erstelle die neue Instanz
-		instance_create_layer(x, y, "Character_Class", obj_Weapon_Sword); // Create Weapon For Knight
+		if (keyboard_check_pressed(ord("E"))) {	
+			//Wenn schon ein Knight im Spiel ist, sollte nicht noch einer spawnbar sein
+			if (!instance_exists(obj_Knight_Class)){
+				 // Ersetze die Instanz von player1 mit player2
+			    instance_destroy();  // Lösche das aktuelle Objekt
+			    instance_create_layer(x, y, "Character_Class", obj_Knight_Class);  // Erstelle die neue Instanz
+				instance_create_layer(x, y, "Character_Class", obj_Weapon_Sword); // Create Weapon For Knight
+			}
 		}
 	}
 	
 	if (collision_circle(x, y, 30, obj_Pickup_Mage_Class, false, false)) {
-		
-		// Überprüfen, ob der Spieler sich in der Nähe des Pickups befindet
+		// Überprüfen, ob der Spieler sich in der Nähe des Pickups befindet	
 		if (keyboard_check_pressed(ord("E"))) {
-			
-	    // Ersetze die Instanz von player1 mit player2
-	    instance_destroy();  // Lösche das aktuelle Objekt
-	    instance_create_layer(x, y, "Character_Class", obj_Mage_Class);  // Erstelle die neue Instanz
+			//Wenn schon ein Mage im Spiel ist, sollte nicht noch einer spawnbar sein
+			if (!instance_exists(obj_Mage_Class)){
+				// Ersetze die Instanz von player1 mit player2
+				instance_destroy();  // Lösche das aktuelle Objekt
+				instance_create_layer(x, y, "Character_Class", obj_Mage_Class);  // Erstelle die neue Instanz
+			}
 		}
+	
 	}
 }
