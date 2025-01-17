@@ -11,10 +11,6 @@ if (hp <= 0) {
 	state = "Death";
 }
 
-show_debug_message(state);
-show_debug_message(hp);
-
-
 if state != "Death" {
 	if (instance_exists(obj_player) && saw_player == true) {
 		state = "Move";	
