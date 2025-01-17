@@ -1,20 +1,7 @@
 // // CODE
 
-//death();
+
 set_depth_neg_bboxbottom();
-//detect_Player_inRadius();
-
-//if (instance_exists(obj_player) && saw_player == true) {
-//	//Moves the Enemy to the Player position while avoiding obstacles
-//	movespeed = 0.5;
-//	mp_potential_step_object(obj_player.x, obj_player.y, movespeed, obj_wall);
-//	set_sprite();
-//} else {
-//	//If there is no Player, dont move
-//	movespeed = 0;
-//	set_sprite();
-//}
-
 knockback();
 
 
@@ -39,12 +26,6 @@ function set_sprite() {
 	}
 	sprite_index = sprite[face];
 }
-
-//function death() {
-//	if (hp <= 0) {
-//	 instance_destroy();
-//	}
-//}
 	
 function knockback() {
 	if (knockback_timer > 0) {
