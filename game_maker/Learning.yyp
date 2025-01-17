@@ -92,6 +92,7 @@
     {"id":{"name":"rm_Game_bedroom","path":"rooms/rm_Game_bedroom/rm_Game_bedroom.yy",},},
     {"id":{"name":"rm_homebase","path":"rooms/rm_homebase/rm_homebase.yy",},},
     {"id":{"name":"rm_Mainmenu","path":"rooms/rm_Mainmenu/rm_Mainmenu.yy",},},
+    {"id":{"name":"scr_Attack_The_Player_Ranged","path":"scripts/scr_Attack_The_Player_Ranged/scr_Attack_The_Player_Ranged.yy",},},
     {"id":{"name":"scr_create_dust","path":"scripts/scr_create_dust/scr_create_dust.yy",},},
     {"id":{"name":"scr_depth","path":"scripts/scr_depth/scr_depth.yy",},},
     {"id":{"name":"scr_macros","path":"scripts/scr_macros/scr_macros.yy",},},

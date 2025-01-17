@@ -4,7 +4,7 @@
 event_inherited();
 
 //Call a script which decides what to do in which state of the Enemy
-set_Enemy_State();
+set_Melee_Enemy_State();
 
 //set states
 if (hp <= 0) {

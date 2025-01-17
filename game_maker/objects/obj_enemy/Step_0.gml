@@ -26,6 +26,7 @@ knockback();
 // movement
 
 function set_sprite() {
+	
 	if (movespeed == 0) {
 		face = IDLE;
 	} else {

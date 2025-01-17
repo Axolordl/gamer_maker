@@ -9,10 +9,13 @@ function set_Range_Enemy_State() {
 			detect_Player_inRadius(); //Im Idle State soll er nach dem Spieler scannen
 			break;
 		case "Move": //Der Fall wenn der Gegner den Spieler sieht
-			Move_To_Player(); //Bewegt sich zum Spieler
-			set_sprite(); 
-			check_to_create_dust();
-			break;
+			if instance_exists((obj_player)) {
+				Move_To_Player_Ranged(); //Bewegt sich zum Spieler
+				set_sprite();
+				break;
+			} else {
+				state = "Idle";
+			}
 		default:
 			set_Idle_State();
 	}
