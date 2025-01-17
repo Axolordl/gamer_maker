@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_set_Melee_Enemy_State",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_set_Melee_Enemy_State",
+  "parent":{
+    "name":"Skripte",
+    "path":"folders/Skripte.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
