@@ -1,6 +1,19 @@
 // Inherit the parent event
 event_inherited();
 
+function Attack_The_Player_Ranged() {
+	//Lets the Ranged Enemy shoot in the Player Direction
+	var aim_to_Player = point_direction(x, y, obj_player.x, obj_player.y - 6); // y-6 so the enemies shoot at the center of the character
+	var offset_x = lengthdir_x(17, aim_to_Player); 
+	var offset_y = lengthdir_y(17, aim_to_Player);
+	var bullet_x = x + offset_x;
+	var bullet_y = y + offset_y;
+	var bullet = instance_create_layer(bullet_x, bullet_y, "Projectiles", obj_Enemy_Bullet);
+	bullet.direction = aim_to_Player;
+	attack_timer = 60; // Beispiel: Schussabstand von 30 Steps
+}
+
+
 if (instance_exists(obj_player) && saw_player == true) {
     // Mindest- und Maximaldistanz zum Spieler
     var min_distance = 30; // Mindestabstand
@@ -12,20 +25,13 @@ if (instance_exists(obj_player) && saw_player == true) {
 
     // Berechne die Richtung zum Spieler
     var direction_to_player = point_direction(x, y, obj_player.x, obj_player.y);
-	
-	//Lets the Ranged Enemy shoot in the Player Direction
-	if (distance_to_player <= max_distance && attack_timer <= 0) {
-	var aim_to_Player = point_direction(x, y, obj_player.x, obj_player.y - 6); // y-6 so the enemies shoot at the center of the character
-	var offset_x = lengthdir_x(17, aim_to_Player); 
-	var offset_y = lengthdir_y(17, aim_to_Player);
-	var bullet_x = x + offset_x;
-	var bullet_y = y + offset_y;
-    var bullet = instance_create_layer(bullet_x, bullet_y, "Projectiles", obj_Enemy_Bullet);
-	bullet.direction = aim_to_Player;
-    attack_timer = 60; // Beispiel: Schussabstand von 30 Steps
-	}
-	attack_timer--;
 
+	if (distance_to_player <= max_distance && attack_timer <= 0) {
+		Attack_The_Player_Ranged();
+	} else {
+		attack_timer--;
+	}
+	
     // Bewegung des Gegners
     if (distance_to_player < min_distance) {
         // Zu nah: Bewege dich vom Spieler weg
@@ -67,8 +73,9 @@ if (instance_exists(obj_player) && saw_player == true) {
 
     // Aktualisiere die Animationen/Sprites
     set_sprite();
-} else {
-    // Kein Spieler in der Nähe: Keine Bewegung
-    movespeed = 0;
-    set_sprite();
 }
+//} else {
+//    // Kein Spieler in der Nähe: Keine Bewegung
+//    movespeed = 0;
+//    set_sprite();
+//}

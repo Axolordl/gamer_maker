@@ -95,6 +95,8 @@
     {"id":{"name":"scr_create_dust","path":"scripts/scr_create_dust/scr_create_dust.yy",},},
     {"id":{"name":"scr_depth","path":"scripts/scr_depth/scr_depth.yy",},},
     {"id":{"name":"scr_macros","path":"scripts/scr_macros/scr_macros.yy",},},
+    {"id":{"name":"scr_set_Melee_Enemy_State","path":"scripts/scr_set_Melee_Enemy_State/scr_set_Melee_Enemy_State.yy",},},
+    {"id":{"name":"scr_set_Range_Enemy_State","path":"scripts/scr_set_Range_Enemy_State/scr_set_Range_Enemy_State.yy",},},
     {"id":{"name":"spr_bed","path":"sprites/spr_bed/spr_bed.yy",},},
     {"id":{"name":"spr_boss_minion_attack","path":"sprites/spr_boss_minion_attack/spr_boss_minion_attack.yy",},},
     {"id":{"name":"spr_boss_minion_idle","path":"sprites/spr_boss_minion_idle/spr_boss_minion_idle.yy",},},

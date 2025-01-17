@@ -28,3 +28,6 @@ knockback_timer = 0;
 
 //Attack Timer
 attack_timer = 0;
+
+//States
+state = "Idle";
