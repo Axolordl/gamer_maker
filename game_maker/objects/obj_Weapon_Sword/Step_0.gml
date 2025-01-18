@@ -3,9 +3,11 @@
 if (instance_exists(obj_Knight_Class)) {
 	Update_Weapon_Position();
 	perform_attack();
+	UpdateHitbox();
 } else {
 	instance_destroy();
 }
+
 
 // // Functions
 function Update_Weapon_Position () {
@@ -82,17 +84,20 @@ function perform_attack() {
 		alarm[0] = attack_cd;
 		can_attack = false;
 		
-		if (image_xscale == -1) {
-			//create a mirrored hitbox for swinging left
-			var hitbox = instance_create_layer(x - 5, y, "Character_Class", obj_Hitbox_Parent);
-			hitbox.image_xscale = -1;
-		} else {
-			//create a hitbox for swinging right
-			var hitbox = instance_create_layer(x + 5, y, "Character_Class", obj_Hitbox_Parent);
-			hitbox.image_xscale = 1;
-		}
+		//set an Alarm, which is the Time for the attack sprite to be in the Slash Frame and only then the hitbox should spawn
+		alarm[1] = 12;
+		
+		//if (image_xscale == -1) {
+		//	//create a mirrored hitbox for swinging left
+		//	var hitbox = instance_create_layer(x - 5, y, "Character_Class", obj_Hitbox_Parent);
+		//	hitbox.image_xscale = -1;
+		//} else {
+		//	//create a hitbox for swinging right
+		//	var hitbox = instance_create_layer(x + 5, y, "Character_Class", obj_Hitbox_Parent);
+		//	hitbox.image_xscale = 1;
+		//}
 		//set an alarm to 24 steps, which destroys the hitbox after the alarm reaches 0
-		alarm[1] = 24;
+		alarm[2] = 24;
 	}
 
 	 //Angriffssprite abspielen
@@ -102,4 +107,20 @@ function perform_attack() {
 	    }	
 	}
 }
+
+function UpdateHitbox() {
+	if (instance_exists(obj_Hitbox_Parent)) {
+		//Hitbox Position follows the Player
+		obj_Hitbox_Parent.x = x;
+		obj_Hitbox_Parent.y = y;
 	
+		//Hitbox Direction is the same as the sword
+		if (image_xscale == -1) {	
+			obj_Hitbox_Parent.image_xscale = -1;
+		} else {
+			obj_Hitbox_Parent.image_xscale = 1;
+		}
+	}
+}
+
+
