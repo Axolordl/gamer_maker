@@ -86,16 +86,7 @@ function perform_attack() {
 		
 		//set an Alarm, which is the Time for the attack sprite to be in the Slash Frame and only then the hitbox should spawn
 		alarm[1] = 12;
-		
-		//if (image_xscale == -1) {
-		//	//create a mirrored hitbox for swinging left
-		//	var hitbox = instance_create_layer(x - 5, y, "Character_Class", obj_Hitbox_Parent);
-		//	hitbox.image_xscale = -1;
-		//} else {
-		//	//create a hitbox for swinging right
-		//	var hitbox = instance_create_layer(x + 5, y, "Character_Class", obj_Hitbox_Parent);
-		//	hitbox.image_xscale = 1;
-		//}
+	
 		//set an alarm to 24 steps, which destroys the hitbox after the alarm reaches 0
 		alarm[2] = 24;
 	}
