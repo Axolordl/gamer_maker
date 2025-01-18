@@ -61,7 +61,7 @@
     },
     "name":"spr_Knight_Sword_Swing_Side",
     "playback":1,
-    "playbackSpeed":5.0,
+    "playbackSpeed":7.0,
     "playbackSpeedType":0,
     "resourceType":"GMSequence",
     "resourceVersion":"2.0",

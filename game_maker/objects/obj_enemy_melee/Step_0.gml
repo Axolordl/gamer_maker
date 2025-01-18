@@ -41,7 +41,7 @@ if (state == "Attack") {
 
 function Move_To_Player_Melee() {
 	movespeed = 0.7;
-	mp_potential_step_object(obj_player.x, obj_player.y, movespeed, obj_enemy);
+	mp_potential_step_object(obj_player.x, obj_player.y, movespeed, obj_wall);
 }
 
 //

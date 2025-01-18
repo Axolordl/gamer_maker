@@ -10,8 +10,8 @@ if (spawn_timer >= spawn_interval && instance_number(obj_enemy) < max_enemies &&
     // Zufällige Positionen für die Markierungen und Gegner festlegen
     for (var i = 0; i < num_enemies; i++) {
         var angle = irandom(360);
-		var distanceX = irandom_range(10, 90); 
-		var distanceY = irandom_range(5, 60); 
+		var distanceX = irandom_range(10, 50); 
+		var distanceY = irandom_range(1, 40); 
         var spawn_x = x + lengthdir_x(distanceX, angle);
         var spawn_y = y + lengthdir_y(distanceY, angle);
 

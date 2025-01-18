@@ -34,5 +34,5 @@
     "path":"sprites/spr_hitbox_EnemyMelee_Bite/spr_hitbox_EnemyMelee_Bite.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

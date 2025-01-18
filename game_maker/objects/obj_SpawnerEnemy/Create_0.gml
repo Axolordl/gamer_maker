@@ -15,5 +15,5 @@ mark_positions = [];
 enemy_types = [obj_enemy_melee, obj_enemy_ranged];
 
 // Timer für den Spawnen-Zyklus
-spawn_interval = 120; // Alle 2 Sekunden
+spawn_interval = 60; // Alle 2 Sekunden
 spawn_timer = 0;

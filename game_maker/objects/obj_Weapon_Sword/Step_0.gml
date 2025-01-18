@@ -7,7 +7,6 @@ if (instance_exists(obj_Knight_Class)) {
 	instance_destroy();
 }
 
-
 // // Functions
 function Update_Weapon_Position () {
 	// Bestimme die Waffe-Position basierend auf der Animation
@@ -96,16 +95,11 @@ function perform_attack() {
 		alarm[1] = 24;
 	}
 
-	// Angriffssprite abspielen
+	 //Angriffssprite abspielen
 	if (sprite_index == attack_side) {
 	    if (image_index >= image_number) { // Letzter Frame der Animation erreicht?
 	        sprite_index = attack_idle; // Zurück zum Standardsprite
-	    }
+	    }	
 	}
-
-	// Cooldown reduzieren
-	//if (attack_cd > 0) {
-	//    attack_cd--;
-	//}
 }
 	
