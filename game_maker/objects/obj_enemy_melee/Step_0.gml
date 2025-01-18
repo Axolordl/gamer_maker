@@ -12,16 +12,45 @@ if (hp <= 0) {
 }
 	
 if state != "Death" {
-	if (instance_exists(obj_player) && saw_player == true) {
-		state = "Move";	
-	} else {
-		state = "Idle";
+    if state != "Attack" { // Gegner greift gerade nicht an
+        if (instance_exists(obj_player) && saw_player == true) {
+            state = "Move"; 
+        } else {
+            state = "Idle";
+        }
+    }
+	// Get the Distance to The Player and if its less then the min distance he should attack (Attack state)
+	var distance_To_Player = point_distance(x, y, obj_player.x, obj_player.y);
+	if (distance_To_Player <= min_distance && state != "Attack") {
+		state = "Attack";
 	}
 }
+
+//If he is in the Attack state he should switch back to Move State when The Animation is done one time
+if (state == "Attack") {
+    // Überprüfen, ob die Animation fertig ist
+    if ((sprite_index == attack_right || sprite_index == attack_left) && image_index >= image_number - 1) {
+        state = "Move";
+    }
+}
+
 
 // // Functions
 
 function Move_To_Player_Melee() {
 	movespeed = 0.7;
 	mp_potential_step_object(obj_player.x, obj_player.y, movespeed, obj_enemy);
+}
+
+//
+function Attack_Player_InRange() {
+	// Mindestdistanz zum Spieler
+	movespeed = 0;
+	//get the direction to the PLayer and set the sprite Attack depending on this direction
+	var direct = point_direction(x, y, obj_player.x, obj_player.y);
+	if (direct > 270 || direct < 90) {
+		sprite_index = attack_right;
+	} else {
+		sprite_index = attack_left;
+	}
 }
