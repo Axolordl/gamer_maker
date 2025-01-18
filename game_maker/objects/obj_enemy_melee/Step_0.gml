@@ -19,10 +19,12 @@ if state != "Death" {
             state = "Idle";
         }
     }
-	// Get the Distance to The Player and if its less then the min distance he should attack (Attack state)
-	var distance_To_Player = point_distance(x, y, obj_player.x, obj_player.y);
-	if (distance_To_Player <= min_distance && state != "Attack") {
-		state = "Attack";
+	if (instance_exists(obj_player)) {
+		// Get the Distance to The Player and if its less then the min distance he should attack (Attack state)
+		var distance_To_Player = point_distance(x, y, obj_player.x, obj_player.y);
+		if (distance_To_Player <= min_distance && state != "Attack") {
+			state = "Attack";
+		}
 	}
 }
 
@@ -53,4 +55,17 @@ function Attack_Player_InRange() {
 	} else {
 		sprite_index = attack_left;
 	}
+	//Create Hitbox for biting right
+	if (sprite_index == attack_right) {
+		var hitbox = instance_create_layer(x + 2, y, "Enemies", obj_Hitbox_EnemyMelee_Attack);
+		hitbox.image_xscale = 1;
+	}
+	//Create Hitbox for biting left
+	if (sprite_index == attack_left) {
+		var hitbox = instance_create_layer(x - 2, y, "Enemies", obj_Hitbox_EnemyMelee_Attack);
+		hitbox.image_xscale = -1;
+	}
+	
+	//Set an Alarm which destroys the created Hitbox if it doesnt hit a PLayer
+	alarm[0] = 20;
 }

@@ -1,15 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_Hitbox_Parent",
+  "%Name":"obj_Hitbox_EnemyMelee_Attack",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_Hitbox_Parent",
+  "name":"obj_Hitbox_EnemyMelee_Attack",
   "overriddenProperties":[],
   "parent":{
-    "name":"Weapon",
-    "path":"folders/Objekte/Weapon.yy",
+    "name":"Dungeon",
+    "path":"folders/Objekte/Dungeon.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_hitbox_sword",
-    "path":"sprites/spr_hitbox_sword/spr_hitbox_sword.yy",
+    "name":"spr_hitbox_EnemyMelee_Bite",
+    "path":"sprites/spr_hitbox_EnemyMelee_Bite/spr_hitbox_EnemyMelee_Bite.yy",
   },
   "spriteMaskId":null,
   "visible":true,

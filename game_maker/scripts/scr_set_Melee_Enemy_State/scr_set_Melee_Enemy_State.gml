@@ -18,11 +18,13 @@ function set_Melee_Enemy_State() {
 				state = "Idle";
 			}
 		case "Attack":
-			Attack_Player_InRange();
-			 if ((sprite_index == attack_left || sprite_index == attack_right) && image_index >= image_number - 1) {
-                state = "Move"; // Nach der Attacke wieder bewegen
-            }
-            break;
+			if (instance_exists(obj_player)) {
+				Attack_Player_InRange();
+				 if ((sprite_index == attack_left || sprite_index == attack_right) && image_index >= image_number - 1) {
+	                state = "Move"; // Nach der Attacke wieder bewegen
+	            }
+	            break;
+			}
 		default:
 			set_Idle_State();
 	}

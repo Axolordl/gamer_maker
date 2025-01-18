@@ -32,7 +32,7 @@
   ],
   "name":"spr_boss_minion_attack_left",
   "nineSlice":null,
-  "origin":7,
+  "origin":9,
   "parent":{
     "name":"Boss Minion",
     "path":"folders/Sprites/Dungeon/Enemies/Boss Minion.yy",
@@ -111,7 +111,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":16,
+    "xorigin":15,
     "yorigin":32,
   },
   "swatchColours":null,
