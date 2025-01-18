@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Weapon",
-    "path":"folders/Sprites/Weapon.yy",
+    "name":"Mage",
+    "path":"folders/Sprites/Dungeon/Enemies/Mage.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

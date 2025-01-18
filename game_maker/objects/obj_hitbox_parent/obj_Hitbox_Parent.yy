@@ -30,9 +30,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_hitbox",
-    "path":"sprites/spr_hitbox/spr_hitbox.yy",
+    "name":"spr_hitbox_sword",
+    "path":"sprites/spr_hitbox_sword/spr_hitbox_sword.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

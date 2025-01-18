@@ -15,7 +15,12 @@ knockback();
 function set_sprite() {
 	
 	if (movespeed == 0) {
-		face = IDLE;
+		//Now we have 2 States in which the Enemy has 0 Movespeed and we have to seperated 
+		//if he is in Idle or Attack
+		
+		if (state != "Attack") {
+			face = IDLE;
+		}
 	} else {
 		var direct = point_direction(x, y, obj_player.x, obj_player.y);
 		if (direct >= 90 && direct <= 270) {
