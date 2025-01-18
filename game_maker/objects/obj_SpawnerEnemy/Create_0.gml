@@ -3,7 +3,7 @@ max_enemies = 6; // Maximal erlaubte Anzahl an Gegnern
 
 // Zeit, bis Gegner spawnen
 mark_duration = 60; // Markierung bleibt 60 Frames sichtbar
-num_enemies = 2; // Anzahl der Gegner pro Welle
+num_enemies = 6; // Anzahl der Gegner pro Welle
 spawn_radius = 30; // Radius um den Spawner, in dem Gegner erscheinen
 wave = 1;
 max_wave = 1;

@@ -1,5 +1,6 @@
 // Timer erhöhen
 spawn_timer++;
+randomize();
 
 // Prüfen, ob es Zeit ist, Gegner zu spawnen und ob die maximale Anzahl nicht überschritten wurde
 if (spawn_timer >= spawn_interval && instance_number(obj_enemy) < max_enemies && wave <= max_wave) {
@@ -9,8 +10,10 @@ if (spawn_timer >= spawn_interval && instance_number(obj_enemy) < max_enemies &&
     // Zufällige Positionen für die Markierungen und Gegner festlegen
     for (var i = 0; i < num_enemies; i++) {
         var angle = irandom(360);
-        var spawn_x = x + lengthdir_x(irandom_range(0, spawn_radius), angle);
-        var spawn_y = y + lengthdir_y(irandom_range(0, spawn_radius), angle);
+		var distanceX = irandom_range(10, 90); 
+		var distanceY = irandom_range(5, 60); 
+        var spawn_x = x + lengthdir_x(distanceX, angle);
+        var spawn_y = y + lengthdir_y(distanceY, angle);
 
         // Markierung erstellen
         var mark = instance_create_layer(spawn_x, spawn_y, "Enemies", obj_mark);
