@@ -79,7 +79,23 @@ function Update_Weapon_Position () {
 function perform_attack() {
 	// Angriff auslösen, wenn die linke Maustaste gedrückt wird
 	if (mouse_check_button_pressed(mb_left) && can_attack == true) {
-	    sprite_index = attack_side; // Angriffssprite setzen
+		
+		// Angriffssprite setzen je nachdem in welche Richtung der SPieler schaut
+		switch (obj_player.face) {
+			case LEFT:
+				sprite_index = attack_side; 
+				break;
+			case RIGHT:
+				sprite_index = attack_side;
+				break;
+			case DOWN:
+				sprite_index = attack_down;
+				break;
+			default:
+				sprite_index = attack_idle;
+				break;
+		}
+		
 	    //set an alarm to a given time (attack_cd), in the alarm event we just set can_attack to true again
 		alarm[0] = attack_cd;
 		can_attack = false;
@@ -92,7 +108,7 @@ function perform_attack() {
 	}
 
 	 //Angriffssprite abspielen
-	if (sprite_index == attack_side) {
+	if (sprite_index == attack_side || sprite_index == attack_down) {
 	    if (image_index >= image_number) { // Letzter Frame der Animation erreicht?
 	        sprite_index = attack_idle; // Zurück zum Standardsprite
 	    }	
