@@ -12,8 +12,8 @@
   "name":"obj_Weapon_Sword",
   "overriddenProperties":[],
   "parent":{
-    "name":"Weapon",
-    "path":"folders/Objekte/Weapon.yy",
+    "name":"Knight Sword",
+    "path":"folders/Objekte/Weapon/Knight Sword.yy",
   },
   "parentObjectId":null,
   "persistent":true,

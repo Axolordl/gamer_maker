@@ -1,17 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"obj_Hitbox_Parent",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_Hitbox_Sword_Swing_Side",
+  "eventList":[],
   "managed":true,
-  "name":"obj_Hitbox_Parent",
+  "name":"obj_Hitbox_Sword_Swing_Side",
   "overriddenProperties":[],
   "parent":{
     "name":"Hitboxes",
     "path":"folders/Objekte/Weapon/Knight Sword/Hitboxes.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_Hitbox_Parent",
+    "path":"objects/obj_Hitbox_Parent/obj_Hitbox_Parent.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -29,7 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_hitbox_sword_side",
+    "path":"sprites/spr_hitbox_sword_side/spr_hitbox_sword_side.yy",
+  },
   "spriteMaskId":null,
   "visible":false,
 }
