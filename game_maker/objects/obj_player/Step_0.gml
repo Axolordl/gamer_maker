@@ -24,6 +24,8 @@ set_face();
 set_sprite();
 set_depth(); 
 
+//Knockback
+get_knockback();
 
 // // FUNCTIONS
 
@@ -125,5 +127,31 @@ function change_Player_Class() {
 			}
 		}
 	
+	}
+}
+	
+function get_knockback() {
+	if (knockback_timer > 0) {
+		
+	    // Prüfe Kollision mit einer Wand
+	    if (!place_meeting(x + knockback_x, y, obj_wall)) {
+			x += knockback_x;
+		}
+	
+		if (!place_meeting(x, y + knockback_y, obj_wall)) {
+		    y += knockback_y;
+		}
+	    // Reduziere den Knockback-Timer
+	    knockback_timer -= 1;
+
+	    // Verlangsamt den Knockback-Effekt nach und nach
+	    knockback_x *= 0.9;
+	    knockback_y *= 0.9;
+
+	    // Stoppt den Knockback, wenn der Timer abläuft
+	    if (knockback_timer <= 0) {
+	        knockback_x = 0;
+	        knockback_y = 0;
+	    }
 	}
 }

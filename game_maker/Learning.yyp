@@ -106,6 +106,7 @@
     {"id":{"name":"scr_create_dust","path":"scripts/scr_create_dust/scr_create_dust.yy",},},
     {"id":{"name":"scr_depth","path":"scripts/scr_depth/scr_depth.yy",},},
     {"id":{"name":"scr_Knockback_Enemy_OnHit","path":"scripts/scr_Knockback_Enemy_OnHit/scr_Knockback_Enemy_OnHit.yy",},},
+    {"id":{"name":"scr_Knockback_Player_OnHit","path":"scripts/scr_Knockback_Player_OnHit/scr_Knockback_Player_OnHit.yy",},},
     {"id":{"name":"scr_macros","path":"scripts/scr_macros/scr_macros.yy",},},
     {"id":{"name":"scr_set_Melee_Enemy_State","path":"scripts/scr_set_Melee_Enemy_State/scr_set_Melee_Enemy_State.yy",},},
     {"id":{"name":"scr_set_Range_Enemy_State","path":"scripts/scr_set_Range_Enemy_State/scr_set_Range_Enemy_State.yy",},},

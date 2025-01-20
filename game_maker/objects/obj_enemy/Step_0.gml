@@ -2,7 +2,7 @@
 
 
 set_depth_neg_bboxbottom();
-knockback();
+get_knockback();
 
 
 
@@ -32,7 +32,7 @@ function set_sprite() {
 	sprite_index = sprite[face];
 }
 	
-function knockback() {
+function get_knockback() {
 	if (knockback_timer > 0) {
 		
     // Prüfe Kollision mit einer Wand
