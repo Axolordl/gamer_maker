@@ -77,7 +77,7 @@
     {"id":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},},
     {"id":{"name":"obj_first_boss","path":"objects/obj_first_boss/obj_first_boss.yy",},},
     {"id":{"name":"obj_Hitbox_EnemyMelee_Attack","path":"objects/obj_Hitbox_EnemyMelee_Attack/obj_Hitbox_EnemyMelee_Attack.yy",},},
-    {"id":{"name":"obj_Hitbox_Parent","path":"objects/obj_Hitbox_Parent/obj_Hitbox_Parent.yy",},},
+    {"id":{"name":"obj_Hitbox_Knight_Sword_Parent","path":"objects/obj_Hitbox_Knight_Sword_Parent/obj_Hitbox_Knight_Sword_Parent.yy",},},
     {"id":{"name":"obj_Hitbox_Sword_Swing_Down","path":"objects/obj_Hitbox_Sword_Swing_Down/obj_Hitbox_Sword_Swing_Down.yy",},},
     {"id":{"name":"obj_Hitbox_Sword_Swing_Side","path":"objects/obj_Hitbox_Sword_Swing_Side/obj_Hitbox_Sword_Swing_Side.yy",},},
     {"id":{"name":"obj_Hitbox_Sword_Swing_Up","path":"objects/obj_Hitbox_Sword_Swing_Up/obj_Hitbox_Sword_Swing_Up.yy",},},

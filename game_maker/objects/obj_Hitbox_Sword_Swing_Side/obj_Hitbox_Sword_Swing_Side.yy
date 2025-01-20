@@ -10,8 +10,8 @@
     "path":"folders/Objekte/Weapon/Knight Sword/Hitboxes.yy",
   },
   "parentObjectId":{
-    "name":"obj_Hitbox_Parent",
-    "path":"objects/obj_Hitbox_Parent/obj_Hitbox_Parent.yy",
+    "name":"obj_Hitbox_Knight_Sword_Parent",
+    "path":"objects/obj_Hitbox_Knight_Sword_Parent/obj_Hitbox_Knight_Sword_Parent.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

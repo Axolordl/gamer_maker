@@ -119,16 +119,16 @@ function perform_attack() {
 }
 
 function UpdateHitbox() {
-	if (instance_exists(obj_Hitbox_Parent)) {
+	if (instance_exists(obj_Hitbox_Knight_Sword_Parent)) {
 		//Hitbox Position follows the Player
-		obj_Hitbox_Parent.x = x;
-		obj_Hitbox_Parent.y = y;
+		obj_Hitbox_Knight_Sword_Parent.x = x;
+		obj_Hitbox_Knight_Sword_Parent.y = y;
 	
 		//Hitbox Direction is the same as the sword
 		if (image_xscale == -1) {	
-			obj_Hitbox_Parent.image_xscale = -1;
+			obj_Hitbox_Knight_Sword_Parent.image_xscale = -1;
 		} else {
-			obj_Hitbox_Parent.image_xscale = 1;
+			obj_Hitbox_Knight_Sword_Parent.image_xscale = 1;
 		}
 	}
 }
