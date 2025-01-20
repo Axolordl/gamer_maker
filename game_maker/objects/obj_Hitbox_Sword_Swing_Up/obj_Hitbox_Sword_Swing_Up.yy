@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_Hitbox_Sword_Swing_Side",
+  "%Name":"obj_Hitbox_Sword_Swing_Up",
   "eventList":[],
   "managed":true,
-  "name":"obj_Hitbox_Sword_Swing_Side",
+  "name":"obj_Hitbox_Sword_Swing_Up",
   "overriddenProperties":[],
   "parent":{
     "name":"Hitboxes",
@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_hitbox_sword_side",
-    "path":"sprites/spr_hitbox_sword_side/spr_hitbox_sword_side.yy",
+    "name":"spr_hitbox_sword_up",
+    "path":"sprites/spr_hitbox_sword_up/spr_hitbox_sword_up.yy",
   },
   "spriteMaskId":null,
   "visible":false,

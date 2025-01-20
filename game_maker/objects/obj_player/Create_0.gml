@@ -29,3 +29,10 @@ sprite[LEFT] = spr_player_left;
 sprite[DOWN] = spr_player_down;
 
 mask_index = sprite[DOWN];
+
+//Knockback Stuff
+knockback_x = 0;
+knockback_y = 0;
+knockback_timer = 0;
+
+has_taken_damage = false;
