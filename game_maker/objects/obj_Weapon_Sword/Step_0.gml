@@ -91,6 +91,9 @@ function perform_attack() {
 			case DOWN:
 				sprite_index = attack_down;
 				break;
+			case UP:
+				sprite_index = attack_up;
+				break;
 			default:
 				sprite_index = attack_idle;
 				break;
@@ -108,7 +111,7 @@ function perform_attack() {
 	}
 
 	 //Angriffssprite abspielen
-	if (sprite_index == attack_side || sprite_index == attack_down) {
+	if (sprite_index == attack_side || sprite_index == attack_down || sprite_index = attack_up) {
 	    if (image_index >= image_number) { // Letzter Frame der Animation erreicht?
 	        sprite_index = attack_idle; // Zurück zum Standardsprite
 	    }	

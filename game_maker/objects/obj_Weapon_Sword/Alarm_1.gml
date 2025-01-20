@@ -14,3 +14,7 @@ if (sprite_index == attack_side) {
 if (sprite_index == attack_down) {
 	var hitbox = instance_create_layer(x, y, "Character_Class", obj_Hitbox_Sword_Swing_Down);
 }
+
+if (sprite_index == attack_up) {
+	var hitbox = instance_create_layer(x, y, "Character_Class", obj_Hitbox_Sword_Swing_Up);
+}
