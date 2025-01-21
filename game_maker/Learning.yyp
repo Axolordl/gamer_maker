@@ -146,6 +146,7 @@
     {"id":{"name":"spr_Knight_Left","path":"sprites/spr_Knight_Left/spr_Knight_Left.yy",},},
     {"id":{"name":"spr_Knight_Right","path":"sprites/spr_Knight_Right/spr_Knight_Right.yy",},},
     {"id":{"name":"spr_Knight_Sword_Swing_Down","path":"sprites/spr_Knight_Sword_Swing_Down/spr_Knight_Sword_Swing_Down.yy",},},
+    {"id":{"name":"spr_Knight_Sword_Swing_Left","path":"sprites/spr_Knight_Sword_Swing_Left/spr_Knight_Sword_Swing_Left.yy",},},
     {"id":{"name":"spr_Knight_Sword_Swing_Side","path":"sprites/spr_Knight_Sword_Swing_Side/spr_Knight_Sword_Swing_Side.yy",},},
     {"id":{"name":"spr_Knight_Sword_Swing_Up","path":"sprites/spr_Knight_Sword_Swing_Up/spr_Knight_Sword_Swing_Up.yy",},},
     {"id":{"name":"spr_Knight_Sword","path":"sprites/spr_Knight_Sword/spr_Knight_Sword.yy",},},
