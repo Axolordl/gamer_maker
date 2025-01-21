@@ -99,6 +99,23 @@ function perform_attack() {
 				break;
 		}
 		
+		//BETTER way to let the PLayer hit in the direction hes aiming with the mouse, but needs a sprite for left and right specific
+		
+		////Angriffssprite setzen je nachdem in welche Richtung der SPieler zielt mit der Maus
+		//var mouse_angle = point_direction(x, y, mouse_x, mouse_y);
+		
+		//if (mouse_angle <= 45 || mouse_angle > 315) {
+		//	sprite_index = attack_side; 
+		//} else if (mouse_angle > 45 && mouse_angle <= 135) {
+		//	obj_player.face = UP;
+		//	sprite_index = attack_up; 
+		//} else if (mouse_angle > 135 && mouse_angle <= 225) {
+		//	sprite_index = attack_side; 
+		//} else if (mouse_angle > 225 && mouse_angle <= 315) {
+		//	obj_player.face = DOWN;
+		//	sprite_index = attack_down; 
+		//}
+		
 	    //set an alarm to a given time (attack_cd), in the alarm event we just set can_attack to true again
 		alarm[0] = attack_cd;
 		can_attack = false;
