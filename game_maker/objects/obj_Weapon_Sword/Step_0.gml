@@ -61,12 +61,12 @@ function Update_Weapon_Position () {
 		default: x = x; y = y; break;
 	}
 
-	// Spiegeln oder anpassen, falls nötig
-	if (obj_player.face == LEFT) {
-	    image_xscale = -1;
-	} else {
-	    image_xscale = 1;
-		}
+	//// Spiegeln oder anpassen, falls nötig
+	//if (obj_player.face == LEFT) {
+	//    image_xscale = -1;
+	//} else {
+	//    image_xscale = 1;
+	//	}
 
 	// Passe die Depth an, wenn der Spieler nach oben schaut
 	if (obj_player.face == UP) {
@@ -80,23 +80,42 @@ function perform_attack() {
 	// Angriff auslösen, wenn die linke Maustaste gedrückt wird
 	if (mouse_check_button_pressed(mb_left) && can_attack == true) {
 		
-		// Angriffssprite setzen je nachdem in welche Richtung der SPieler schaut
-		switch (obj_player.face) {
-			case LEFT:
-				sprite_index = attack_side; 
-				break;
-			case RIGHT:
-				sprite_index = attack_side;
-				break;
-			case DOWN:
-				sprite_index = attack_down;
-				break;
-			case UP:
-				sprite_index = attack_up;
-				break;
-			default:
-				sprite_index = attack_idle;
-				break;
+		//// Angriffssprite setzen je nachdem in welche Richtung der SPieler schaut
+		//switch (obj_player.face) {
+		//	case LEFT:
+		//		sprite_index = attack_left; 
+		//		break;
+		//	case RIGHT:
+		//		sprite_index = attack_right;
+		//		break;
+		//	case DOWN:
+		//		sprite_index = attack_down;
+		//		break;
+		//	case UP:
+		//		sprite_index = attack_up;
+		//		break;
+		//	default:
+		//		sprite_index = attack_idle;
+		//		break;
+		//}
+		
+		//BETTER way to let the PLayer hit in the direction hes aiming with the mouse, but needs a sprite for left and right specific
+		
+		//Angriffssprite setzen je nachdem in welche Richtung der SPieler zielt mit der Maus
+		var mouse_angle = point_direction(x, y, mouse_x, mouse_y);
+		
+		if (mouse_angle <= 45 || mouse_angle > 315) {
+			obj_player.face = RIGHT;
+			sprite_index = attack_right; 
+		} else if (mouse_angle > 45 && mouse_angle <= 135) {
+			obj_player.face = UP;
+			sprite_index = attack_up; 
+		} else if (mouse_angle > 135 && mouse_angle <= 225) {
+			obj_player.face = LEFT;
+			sprite_index = attack_left; 
+		} else if (mouse_angle > 225 && mouse_angle <= 315) {
+			obj_player.face = DOWN;
+			sprite_index = attack_down;
 		}
 		
 	    //set an alarm to a given time (attack_cd), in the alarm event we just set can_attack to true again
@@ -111,7 +130,7 @@ function perform_attack() {
 	}
 
 	 //Angriffssprite abspielen
-	if (sprite_index == attack_side || sprite_index == attack_down || sprite_index = attack_up) {
+	if (sprite_index == attack_right || sprite_index == attack_down || sprite_index = attack_up || sprite_index == attack_left) {
 	    if (image_index >= image_number) { // Letzter Frame der Animation erreicht?
 	        sprite_index = attack_idle; // Zurück zum Standardsprite
 	    }	
@@ -124,12 +143,12 @@ function UpdateHitbox() {
 		obj_Hitbox_Knight_Sword_Parent.x = x;
 		obj_Hitbox_Knight_Sword_Parent.y = y;
 	
-		//Hitbox Direction is the same as the sword
-		if (image_xscale == -1) {	
-			obj_Hitbox_Knight_Sword_Parent.image_xscale = -1;
-		} else {
-			obj_Hitbox_Knight_Sword_Parent.image_xscale = 1;
-		}
+		////Hitbox Direction is the same as the sword
+		//if (image_xscale == -1) {	
+		//	obj_Hitbox_Knight_Sword_Parent.image_xscale = -1;
+		//} else {
+		//	obj_Hitbox_Knight_Sword_Parent.image_xscale = 1;
+		//}
 	}
 }
 
