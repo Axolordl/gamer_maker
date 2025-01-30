@@ -1,5 +1,6 @@
 // // Code
 // Inherit the parent event
+
 event_inherited();
 
 check_for_dash();
@@ -9,12 +10,10 @@ dash_after_check();
 // // Functions
 
 
-
-
 ///@desc Checks if the player wants to dash and sets the direction with the player face direction (To Actually dash you need the dash after check function)
 function check_for_dash() {
 	//Wir prüfen ob der spieler dash mit space und ob wir schon dashen
-	if (keyboard_check_pressed(vk_space) && !is_dashing) {
+	if (keyboard_check_pressed(vk_space) && alarm[1] <= 0) {
 	
 	    is_dashing = true; //Momentan am Dashen
 	    dash_distance_remaining = dash_distance; // Wir dekrementieren dash distance remaining später 
@@ -40,6 +39,7 @@ function dash_after_check() {
 	    if (!place_meeting(x + new_x, y + new_y, obj_wall)) {
 	        x += new_x;
 	        y += new_y;
+			effect_create_below(ef_smoke, x, y, 0, c_ltgray);
 	        dash_distance_remaining -= dash_speed; // Verbleibende Distanz verringern
 	    } else {
 	        // Dash bei Kollision stoppen

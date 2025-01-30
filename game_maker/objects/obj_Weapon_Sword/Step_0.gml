@@ -67,7 +67,7 @@ function Update_Weapon_Position () {
 		if (obj_player.face == LEFT) {
 		    sprite_index = attack_hold_left;
 		} else {
-			 sprite_index = attack_idle;
+			sprite_index = attack_idle;
 			}
 	}
 	
@@ -78,7 +78,6 @@ function Update_Weapon_Position () {
 	//} else {
 	//	image_xscale = 1;
 	//	}
-	
 
 	// Passe die Depth an, wenn der Spieler nach oben schaut
 	if (obj_player.face == UP) {
