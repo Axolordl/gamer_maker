@@ -15,7 +15,7 @@ healthbar_y = 20;
 //Stamina Points
 stamina = 50;
 stamina_max = stamina;
-stamina_regen = 1;
+stamina_regen = 0.3;
 
 //Stamina Size
 staminabar_width = 100;

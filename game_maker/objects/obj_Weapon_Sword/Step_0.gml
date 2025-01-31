@@ -2,8 +2,11 @@
 
 if (instance_exists(obj_Knight_Class)) {
 	Update_Weapon_Position();
-	perform_attack();
-	UpdateHitbox();
+	//Player can only attack if he has enough stamina
+	if ((obj_player.stamina - obj_Knight_Class.stamina_consum_attack) > 0) {
+		perform_attack();
+		UpdateHitbox();
+	}
 } else {
 	instance_destroy();
 }
@@ -90,6 +93,8 @@ function Update_Weapon_Position () {
 function perform_attack() {
 	// Angriff auslösen, wenn die linke Maustaste gedrückt wird
 	if (mouse_check_button_pressed(mb_left) && can_attack == true) {
+		
+		obj_player.stamina -= obj_Knight_Class.stamina_consum_attack; //Consum Stamina on Attack
 		
 		//// Angriffssprite setzen je nachdem in welche Richtung der SPieler schaut
 		//switch (obj_player.face) {

@@ -7,7 +7,8 @@ if (hp <= 0) {
 	instance_destroy(self);	
 }
 
-if (stamina <= stamina_max) {
+//Check if the player has less stamina then max, then regen stamina 
+if (stamina < stamina_max) {
 	stamina += stamina_regen;
 }
 
