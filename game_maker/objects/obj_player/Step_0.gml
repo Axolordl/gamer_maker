@@ -7,6 +7,11 @@ if (hp <= 0) {
 	instance_destroy(self);	
 }
 
+//Check if the player has less stamina then max, then regen stamina 
+if (stamina < stamina_max) {
+	stamina += stamina_regen;
+}
+
 // movement & speed
 move_keys = get_move_keys()
 

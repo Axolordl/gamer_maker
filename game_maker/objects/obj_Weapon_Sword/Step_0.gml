@@ -2,8 +2,11 @@
 
 if (instance_exists(obj_Knight_Class)) {
 	Update_Weapon_Position();
-	perform_attack();
-	UpdateHitbox();
+	//Player can only attack if he has enough stamina
+	if ((obj_player.stamina - obj_Knight_Class.stamina_consum_attack) > 0) {
+		perform_attack();
+		UpdateHitbox();
+	}
 } else {
 	instance_destroy();
 }
@@ -61,11 +64,22 @@ function Update_Weapon_Position () {
 		default: x = x; y = y; break;
 	}
 
-	//// Spiegeln oder anpassen, falls nötig
+	//Check if the player can attack and is moving to the left then switch sprite
+	//to holding the weapon left, so it doesnt fuck up the xscale
+	if (can_attack == true) {
+		if (obj_player.face == LEFT) {
+		    sprite_index = attack_hold_left;
+		} else {
+			sprite_index = attack_idle;
+			}
+	}
+	
+	// <------- Old way to rotate the Weapon, but it doesnt rotate right if the player hits to the Left ---->
+	
 	//if (obj_player.face == LEFT) {
 	//    image_xscale = -1;
 	//} else {
-	//    image_xscale = 1;
+	//	image_xscale = 1;
 	//	}
 
 	// Passe die Depth an, wenn der Spieler nach oben schaut
@@ -79,6 +93,8 @@ function Update_Weapon_Position () {
 function perform_attack() {
 	// Angriff auslösen, wenn die linke Maustaste gedrückt wird
 	if (mouse_check_button_pressed(mb_left) && can_attack == true) {
+		
+		obj_player.stamina -= obj_Knight_Class.stamina_consum_attack; //Consum Stamina on Attack
 		
 		//// Angriffssprite setzen je nachdem in welche Richtung der SPieler schaut
 		//switch (obj_player.face) {
@@ -102,8 +118,8 @@ function perform_attack() {
 		//BETTER way to let the PLayer hit in the direction hes aiming with the mouse, but needs a sprite for left and right specific
 		
 		//Angriffssprite setzen je nachdem in welche Richtung der SPieler zielt mit der Maus
+		show_debug_message(image_xscale)
 		var mouse_angle = point_direction(x, y, mouse_x, mouse_y);
-		
 		if (mouse_angle <= 45 || mouse_angle > 315) {
 			obj_player.face = RIGHT;
 			sprite_index = attack_right; 
@@ -112,7 +128,7 @@ function perform_attack() {
 			sprite_index = attack_up; 
 		} else if (mouse_angle > 135 && mouse_angle <= 225) {
 			obj_player.face = LEFT;
-			sprite_index = attack_left; 
+			sprite_index = attack_left;
 		} else if (mouse_angle > 225 && mouse_angle <= 315) {
 			obj_player.face = DOWN;
 			sprite_index = attack_down;
