@@ -12,6 +12,19 @@ healthbar_height = 32;
 healthbar_x = 15;
 healthbar_y = 20;
 
+//Stamina Points
+stamina = 50;
+stamina_max = stamina;
+stamina_regen = 1;
+
+//Stamina Size
+staminabar_width = 100;
+stamiinabar_height = 32;
+
+//Stamina Bar Position
+staminabar_x = 15;
+staminabar_y = 60;
+
 // keyboard & control
 move_keys = [];
 cooldown = 0; // I think 60 = 1s, so X*60 = Xs

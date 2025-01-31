@@ -7,6 +7,10 @@ if (hp <= 0) {
 	instance_destroy(self);	
 }
 
+if (stamina <= stamina_max) {
+	stamina += stamina_regen;
+}
+
 // movement & speed
 move_keys = get_move_keys()
 

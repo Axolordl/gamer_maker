@@ -166,6 +166,8 @@
     {"id":{"name":"spr_skull","path":"sprites/spr_skull/spr_skull.yy",},},
     {"id":{"name":"spr_spikes","path":"sprites/spr_spikes/spr_spikes.yy",},},
     {"id":{"name":"spr_Staff","path":"sprites/spr_Staff/spr_Staff.yy",},},
+    {"id":{"name":"spr_Stamina_Bar_Background","path":"sprites/spr_Stamina_Bar_Background/spr_Stamina_Bar_Background.yy",},},
+    {"id":{"name":"spr_Stamina_Bar","path":"sprites/spr_Stamina_Bar/spr_Stamina_Bar.yy",},},
     {"id":{"name":"spr_torch","path":"sprites/spr_torch/spr_torch.yy",},},
     {"id":{"name":"spr_tv","path":"sprites/spr_tv/spr_tv.yy",},},
     {"id":{"name":"spr_wall","path":"sprites/spr_wall/spr_wall.yy",},},

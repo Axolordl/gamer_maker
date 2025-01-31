@@ -11,6 +11,19 @@ hp_max = hp;
 healthbar_width = 200;
 healthbar_height = 32;
 
+//Stamina Points
+stamina = 100;
+stamina_max = stamina;
+
+//Stamina Bar Size
+staminabar_width = 200;
+staminabar_height = 32;
+
+//Stamina Consum
+stamina_consum_dash = 30;
+stamina_consum_attack = 10;
+
+
 // sprites
 sprite[RIGHT] = spr_Knight_Right;
 sprite[UP] = spr_Knight_Up;
