@@ -189,6 +189,7 @@
     {"id":{"name":"Sprite40","path":"sprites/Sprite40/Sprite40.yy",},},
     {"id":{"name":"ts_floors","path":"tilesets/ts_floors/ts_floors.yy",},},
     {"id":{"name":"ts_house_tiles","path":"tilesets/ts_house_tiles/ts_house_tiles.yy",},},
+    {"id":{"name":"ts_lava_floors_stones","path":"tilesets/ts_lava_floors_stones/ts_lava_floors_stones.yy",},},
     {"id":{"name":"ts_lava","path":"tilesets/ts_lava/ts_lava.yy",},},
     {"id":{"name":"ts_walls_decorations","path":"tilesets/ts_walls_decorations/ts_walls_decorations.yy",},},
     {"id":{"name":"ts_walls","path":"tilesets/ts_walls/ts_walls.yy",},},
