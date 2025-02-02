@@ -7,7 +7,7 @@ function check_to_create_dust() {
 		
 		//only create dust if the enemy is moving are moving
 		if (saw_player == true) {
-			instance_create_layer(x + random_range(-4, 4), bbox_bottom + random_range(-3, 3), "Enemies", obj_dust);
+			instance_create_layer(x + random_range(-4, 4), bbox_bottom + random_range(-3, 3), "Enemies", obj_dust_enemy_melee_sprinting);
 		}
 	} else {create_dust_timer--;}
 }

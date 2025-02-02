@@ -1,12 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"obj_dust",
+  "%Name":"obj_dust_enemy_melee_sprinting",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":7,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_dust",
+  "name":"obj_dust_enemy_melee_sprinting",
   "overriddenProperties":[],
   "parent":{
     "name":"VFX",
