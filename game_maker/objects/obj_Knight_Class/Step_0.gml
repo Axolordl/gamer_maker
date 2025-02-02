@@ -18,6 +18,7 @@ function check_for_dash() {
 		if (keyboard_check_pressed(vk_space) && alarm[1] <= 0) {
 			stamina -= stamina_consum_dash; //Consum Stamina if the player dashes
 		    is_dashing = true; //Momentan am Dashen
+			instance_create_depth(x, y, depth, obj_dash_dust); //Create dash dust
 		    dash_distance_remaining = dash_distance; // Wir dekrementieren dash distance remaining später 
 
 		    // Richtung festlegen jenachdem in welche richtung der Spieler schaut
@@ -60,7 +61,6 @@ function dash_after_check() {
 	    if (!place_meeting(x + new_x, y + new_y, obj_wall)) {
 	        x += new_x;
 	        y += new_y;
-			effect_create_below(ef_smoke, x, y, 0, c_ltgray);
 	        dash_distance_remaining -= dash_speed; // Verbleibende Distanz verringern
 	    } else {
 	        // Dash bei Kollision stoppen
