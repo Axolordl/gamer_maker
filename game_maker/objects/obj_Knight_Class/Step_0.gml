@@ -15,7 +15,7 @@ function check_for_dash() {
 	//Before the player can dash it should check if the player has enough stamina 
 	if ((stamina - stamina_consum_dash) > 0) {
 		//Wir prüfen ob der spieler dash mit space und ob wir schon dashen
-		if (keyboard_check_pressed(vk_space) && alarm[1] <= 0) {
+		if (keyboard_check_pressed(vk_space) && alarm[1] <= 0 && !is_dashing) {
 			stamina -= stamina_consum_dash; //Consum Stamina if the player dashes
 		    is_dashing = true; //Momentan am Dashen
 			instance_create_depth(x, y, depth, obj_dash_dust); //Create dash dust
