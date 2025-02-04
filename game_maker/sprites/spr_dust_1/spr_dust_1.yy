@@ -30,8 +30,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"VFX",
-    "path":"folders/Sprites/VFX.yy",
+    "name":"Enemy Melee Dust Sprinting",
+    "path":"folders/Sprites/VFX/Enemy Melee Dust Sprinting.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
