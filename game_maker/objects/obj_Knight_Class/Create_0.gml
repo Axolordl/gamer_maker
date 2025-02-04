@@ -8,7 +8,7 @@ hp = 100;
 hp_max = hp;
 
 //Health Bar Size
-healthbar_width = 200;
+healthbar_width = 200*(hp_max/100);
 healthbar_height = 32;
 
 //Stamina Points
