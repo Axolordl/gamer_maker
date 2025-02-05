@@ -3,5 +3,10 @@
 if (instance_exists(obj_Knight_Class)) {
 	var damage = obj_Weapon_Sword.attack_damage;
 	hp -= damage;
-	instance_create_depth(x, y, depth, obj_hit_effect_1);
+	if (face == LEFT) {
+		instance_create_depth(x, y, depth, obj_hit_effect_1_right); //Create a hitspark to the right when hit from left
+	} else {
+		instance_create_depth(x, y, depth, obj_hit_effect_1_left); //Create a hitspark to the left when hit from right
+	}
+	
 }
