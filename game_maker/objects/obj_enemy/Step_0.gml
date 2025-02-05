@@ -1,20 +1,8 @@
 // // CODE
-death();
+
+
 set_depth_neg_bboxbottom();
-detect_Player_inRadius();
-
-//if (instance_exists(obj_player) && saw_player == true) {
-//	//Moves the Enemy to the Player position while avoiding obstacles
-//	movespeed = 0.5;
-//	mp_potential_step_object(obj_player.x, obj_player.y, movespeed, obj_wall);
-//	set_sprite();
-//} else {
-//	//If there is no Player, dont move
-//	movespeed = 0;
-//	set_sprite();
-//}
-
-knockback();
+get_knockback();
 
 
 
@@ -25,8 +13,14 @@ knockback();
 // movement
 
 function set_sprite() {
+	
 	if (movespeed == 0) {
-		face = IDLE;
+		//Now we have 2 States in which the Enemy has 0 Movespeed and we have to seperated 
+		//if he is in Idle or Attack
+		
+		if (state != "Attack") {
+			face = IDLE;
+		}
 	} else {
 		var direct = point_direction(x, y, obj_player.x, obj_player.y);
 		if (direct >= 90 && direct <= 270) {
@@ -37,14 +31,8 @@ function set_sprite() {
 	}
 	sprite_index = sprite[face];
 }
-
-function death() {
-	if (hp <= 0) {
-	 instance_destroy();
-	}
-}
 	
-function knockback() {
+function get_knockback() {
 	if (knockback_timer > 0) {
 		
     // Prüfe Kollision mit einer Wand
@@ -74,4 +62,10 @@ function detect_Player_inRadius() {
 	if (collision_circle(x, y, detection_radius, obj_player, false, false) || hp < max_hp) {
 		saw_player = true;
 	}
+}
+
+function set_Idle_State() {
+	movespeed = 0;
+	saw_player = false;
+	face = IDLE;
 }

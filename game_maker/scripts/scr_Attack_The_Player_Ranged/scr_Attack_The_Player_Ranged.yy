@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_Attack_The_Player_Ranged",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_Attack_The_Player_Ranged",
+  "parent":{
+    "name":"Skripte",
+    "path":"folders/Skripte.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

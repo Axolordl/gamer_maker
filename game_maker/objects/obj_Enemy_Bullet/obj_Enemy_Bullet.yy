@@ -11,8 +11,8 @@
   "name":"obj_Enemy_Bullet",
   "overriddenProperties":[],
   "parent":{
-    "name":"Weapon",
-    "path":"folders/Objekte/Weapon.yy",
+    "name":"Dungeon",
+    "path":"folders/Objekte/Dungeon.yy",
   },
   "parentObjectId":null,
   "persistent":false,
