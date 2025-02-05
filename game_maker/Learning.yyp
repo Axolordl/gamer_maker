@@ -134,6 +134,7 @@
     {"id":{"name":"spr_bullet","path":"sprites/spr_bullet/spr_bullet.yy",},},
     {"id":{"name":"spr_Button","path":"sprites/spr_Button/spr_Button.yy",},},
     {"id":{"name":"spr_candle","path":"sprites/spr_candle/spr_candle.yy",},},
+    {"id":{"name":"spr_dash_dust_down","path":"sprites/spr_dash_dust_down/spr_dash_dust_down.yy",},},
     {"id":{"name":"spr_dash_dust_left","path":"sprites/spr_dash_dust_left/spr_dash_dust_left.yy",},},
     {"id":{"name":"spr_dash_dust_right","path":"sprites/spr_dash_dust_right/spr_dash_dust_right.yy",},},
     {"id":{"name":"spr_dash_dust_up","path":"sprites/spr_dash_dust_up/spr_dash_dust_up.yy",},},
