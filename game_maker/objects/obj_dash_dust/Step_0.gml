@@ -16,11 +16,11 @@ function set_Dash_Dust_Sprite() {
 		case LEFT:
 			sprite_index = dash_dust_left;
 			break;
-		case UP: //Needs a Up Sprite
+		case UP: 
 			sprite_index = dash_dust_up;
 			break;
-		case DOWN: //Needs a Down Sprite
-			sprite_index = dash_dust_right;
+		case DOWN: 
+			sprite_index = dash_dust_down;
 			break;
 		default:
 			break;
