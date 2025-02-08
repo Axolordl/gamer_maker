@@ -26,8 +26,10 @@
     "name":"Default",
     "path":"texturegroups/Default",
   },
-  "tileAnimationFrames":[],
-  "tileAnimationSpeed":15.0,
+  "tileAnimationFrames":[
+    {"$GMTileAnimation":"","%Name":"lava_edge","frames":[65,66,67,65,66,67,65,66,],"name":"lava_edge","resourceType":"GMTileAnimation","resourceVersion":"2.0",},
+  ],
+  "tileAnimationSpeed":6.0,
   "tileHeight":16,
   "tilehsep":0,
   "tilevsep":0,
