@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_first_boss_idle",
-    "path":"sprites/spr_first_boss_idle/spr_first_boss_idle.yy",
+    "name":"spr_first_boss_idle1",
+    "path":"sprites/spr_first_boss_idle1/spr_first_boss_idle1.yy",
   },
   "spriteMaskId":null,
   "visible":true,
