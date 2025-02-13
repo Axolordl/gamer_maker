@@ -37,14 +37,12 @@
     {"name":"inst_75430943","path":"rooms/rm_homebase/rm_homebase.yy",},
     {"name":"inst_3561E2D0","path":"rooms/rm_homebase/rm_homebase.yy",},
     {"name":"inst_7DAD196C","path":"rooms/rm_homebase/rm_homebase.yy",},
-    {"name":"inst_39F25347","path":"rooms/rm_homebase/rm_homebase.yy",},
     {"name":"inst_27C0EA9F","path":"rooms/rm_homebase/rm_homebase.yy",},
   ],
   "isDnd":false,
   "layers":[
     {"$GMRInstanceLayer":"","%Name":"Character_Class","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v1","%Name":"inst_75430943","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_75430943","objectId":{"name":"obj_Pickup_Knight_Class","path":"objects/obj_Pickup_Knight_Class/obj_Pickup_Knight_Class.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":162.0,"y":335.0,},
-        {"$GMRInstance":"v1","%Name":"inst_39F25347","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_39F25347","objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":228.0,"y":297.0,},
         {"$GMRInstance":"v1","%Name":"inst_27C0EA9F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_27C0EA9F","objectId":{"name":"obj_Pickup_Mage_Class","path":"objects/obj_Pickup_Mage_Class/obj_Pickup_Mage_Class.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":287.0,"y":335.0,},
       ],"layers":[],"name":"Character_Class","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Projectiles","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"Projectiles","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
