@@ -11,9 +11,9 @@ movespeed = 0;
 // sprites
 face = IDLE;
 
-sprite[IDLE] = spr_boss_minion_idle
-sprite[RIGHT] = spr_boss_minion_right
-sprite[LEFT] =  spr_boss_minion_left
+sprite[IDLE] = noone;
+sprite[RIGHT] = noone; 
+sprite[LEFT] = noone;  
 
 //Mask Collision
 mask_index = sprite[IDLE];
